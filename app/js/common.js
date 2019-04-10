@@ -34,7 +34,7 @@ $(function () {
 	$('.menu').click(function () {
 		if ($(window).width() < 992) {
 			$('header').addClass('black-header');
-		}else{
+		} else {
 			$('header').removeClass('black-header');
 		}
 	});
