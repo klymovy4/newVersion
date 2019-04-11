@@ -51,7 +51,6 @@ $(function () {
 		mobileScrolDown = true;
 		if ($(window).width() < 992) {
 			fMenu = !fMenu;
-			console.log(fMenu);
 			if (fMenu) {
 				$('header').addClass('black-header');
 
