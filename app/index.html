@@ -382,7 +382,7 @@
 			<div class="showcase-img">
 				<div class="row showcase-wrap">
 					<div class="col-4 col-xs-4 column p-0">
-						<img class=' img-responsive blog-item sky'
+						<img class='myImg img-responsive blog-item sky'
 							src="https://images.pexels.com/photos/2085998/pexels-photo-2085998.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
 							alt="1">
 						<img class='myImg img-responsive blog-item different'
@@ -503,16 +503,30 @@
 						target="_self" method="POST" id="mG61Hd" class='form needs-validation'>
 						<div class="form-row">
 							<div class="col-md-12">
-								<!-- <label for="validationName">Имя</label> -->
-								<input type="text" class='form-control mt-4' id='validationName' name='entry.1487915639'
-									placeholder="Name" required>
-								<input type="text" class="form-control mt-4" id="validationEmail"
-									name='entry.1203443200' placeholder="Email"
-									pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
-								<input type="phone" class="form-control mt-4" id="validationPhone"
-									name='entry.321897156' placeholder="Phone" required>
-								<textarea type='text' class="form-control mt-4" id="validationTextarea" rows="5"
-									name='entry.2083559067' placeholder="Write something" required></textarea>
+
+								<div class="inputbox">
+									<label for="validationName" class='labeltext'>Name</label>
+									<input type="text" class='form-control userinput' id='validationName'
+										name='entry.1487915639' required>
+								</div>
+
+								<div class="inputbox">
+									<label for="validationEmail" class='labeltext'>Email</label>
+									<input type="text" class="form-control userinput" name='entry.1203443200'
+										pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+								</div>
+								<div class="inputbox">
+									<label for="validationPhone" class='labeltext' id="validationPhone">Phone</label>
+									<input type="phone" class="form-control userinput" name='entry.321897156' required>
+								</div>
+
+								<div class="inputbox">
+
+									<label for="validationTextarea" class='labeltext' id="validationTextarea">Write
+										something</label>
+									<textarea type='text' class="form-control userinput" id="" rows="5"
+										name='entry.2083559067' required></textarea>
+								</div>
 
 								<button class=' my-4' type='submit'>Send</button>
 							</div>
@@ -525,10 +539,10 @@
 		<div class="deep-footer pt-3 pb-1">
 			<div class="container">
 				<div class="row">
-					<div class="col-xs-6 col-6  a">
+					<div class="col-xs-6 col-6">
 						<img src="img/logo.png" alt="logo-footer">
 					</div>
-					<div class="col-xs-6 col-6 a justify-content-end d-flex">
+					<div class="col-xs-6 col-6 justify-content-end d-flex">
 						<p>Design by <a href="#">Roman Klymovych</a> for test purposes only</p>
 					</div>
 				</div>
@@ -544,7 +558,7 @@
 	</div>
 
 
-	
+
 
 
 
