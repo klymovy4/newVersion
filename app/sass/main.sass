@@ -13,6 +13,30 @@
     outline: 1px solid blue
 * li
     list-style: none
+.loader 
+	background: none repeat scroll 0 0 #ffffff
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+
+.loader_inner 
+	background-image: url("../img/preloader.gif")
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center center
+	background-color: #fff
+	height: 60px
+	width: 60px
+	margin-top: -30px
+	margin-left: -30px
+	left: 50%
+	top: 50%
+	position: absolute
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid 
@@ -436,4 +460,50 @@ form
 
 .deep-footer
     border-top: 1px solid grey
+
+.modall
+    display: none
+    z-index: 2
+    position: fixed
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    background-color: rgba(0,0,0,0.8)
+    // width: 100%
+    // height: 100%
+    .modal-content
+        display: block !important
+        margin: 2% auto 0
+        padding: 10px
+        height: 80%
+        width: auto
+        animation-name: zoom
+        animation-duration: .6s
+    #caption
+        color: white
+        margin: auto
+        text-align: center
+        
+/* Add Animation
+.modal-content, #caption
+  -webkit-animation-name: zoom
+  -webkit-animation-duration: 0.6s
+  animation-name: zoom
+  animation-duration: 0.6s
+
+@-webkit-keyframes zoom
+  from
+    -webkit-transform: scale(0)
+
+  to
+    -webkit-transform: scale(1)
+
+
+@keyframes zoom
+  from
+    transform: scale(0)
+
+  to
+    transform: scale(1)
 @import "media" // Всегда в конце

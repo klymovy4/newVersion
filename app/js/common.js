@@ -1,3 +1,11 @@
+
+
+// $(window).load(function () {
+
+// 	$(".loader_inner").fadeOut();
+// 	$(".loader").delay(400).fadeOut("slow");
+
+// });
 $(function () {
 	//================================slide#=============================
 	$('input[type="phone"]').mask('+3 80(99) 99 99 999');
@@ -55,7 +63,7 @@ $(function () {
 				$('header').addClass('black-header');
 
 			} else {
-					$('header').removeClass('black-header');
+				$('header').removeClass('black-header');
 			}
 		} else {
 			$('header').removeClass('black-header');
@@ -64,7 +72,7 @@ $(function () {
 	});
 
 	$('.menu').click(function () {
-		if(!fMenu && $(document).scrollTop() > 5){
+		if (!fMenu && $(document).scrollTop() > 5) {
 			$('header').addClass('black-header');
 		}
 	});
@@ -159,35 +167,17 @@ $(function () {
 		$('.blog-item').show(500);
 
 	});
+
+	$('.myImg').click(function () {
+		$('.modal-content').attr('src', this.src);
+		$('#caption').html(this.alt);
+		$('.modall').show();
+
+	});
+	$('.modall').click(function () {
+		$('.modal-content').hide();
+		$('.modall').hide();
+	})
 });
-//=============================for form
-// (function () {
-// 	'use strict';
-// 	window.addEventListener('load', function () {
-// 		// Fetch all the forms we want to apply custom Bootstrap validation styles to
-// 		var forms = document.getElementsByClassName('needs-validation');
-// 		// Loop over them and prevent submission
-// 		var validation = Array.prototype.filter.call(forms, function (form) {
-// 			form.addEventListener('submit', function (event) {
-// 				if (form.checkValidity() === false) {
-// 					event.preventDefault();
-// 					event.stopPropagation();
-// 				}
-// 				form.classList.add('was-validated');
-// 			}, false);
-// 		});
-// 	}, false);
-// })();
 
-// $(window).scroll(function() {
 
-//  });
-
-// $(document).ready(function () {
-// 	$(window).scroll(function () {
-// 		if ($(document).scrollTop() > 50) {
-// 			alert(123);
-// 		}
-// 	});
-// });
-// $("html , body").animate({ scrollTop: -75 }, 500);
