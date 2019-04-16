@@ -458,6 +458,30 @@ form
         padding: 15px 30px
         font-size: 13px
 
+.inputbox
+    position: relative
+    margin-top: 20px
+    margin-bottom: 40px
+    .labeltext
+        position: absolute
+        line-height: 40px
+        font-size: 20px
+        color: white
+        margin-left: 5px
+        transition: .5s
+    .userinput
+        background: transparent
+        position: relative
+        border-bottom: 1px solid #a5a5a5
+        // color: #575454
+        outline: none
+.focus .labeltext
+    transform: translateY(-35px)
+    font-size: 16px
+    color: white
+
+
+
 .deep-footer
     border-top: 1px solid grey
 
@@ -484,7 +508,9 @@ form
         color: white
         margin: auto
         text-align: center
-        
+.myImg
+    cursor: pointer
+
 /* Add Animation
 .modal-content, #caption
   -webkit-animation-name: zoom
