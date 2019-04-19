@@ -448,15 +448,39 @@ form
             outline: none
             color: white
     button[type='submit']
+        position: relative
+        padding: 15px 34px
+        overflow: hidden
+        font-family: 'Montserrat Alternates', sans-serif
+        color: white
+        latter-spacing: 1px
+        text-transform: uppercase
+        font-weight: 600
+        transform: matrix3d(1,0,0,0,0,1,0,0,0,1,0,0,0,0,1)
         background: #17bed2
         border: none
-        color: #ccc
-        font-family: Hind, sans-serif
-        font-weight: 600
-        font-size: 13px
+        outline: none
         cursor: pointer
-        padding: 15px 30px
-        font-size: 13px
+        background: linear-gradient(90deg, #a3ffb0, #2bd9e8)
+        &:before, &:after
+            content: ''
+            position: absolute
+            // z-index: -1
+            width: 100%
+            height: 100%
+            left: -110%
+            top: 0
+            opacity: 0.1
+            background: black
+            transform: skewX(25deg)
+            transition: .5s ease
+        &:hover
+            &:before
+                left: -10%
+                transition: .3s ease
+            &:after
+                left: -20%
+
 
 .inputbox
     position: relative
@@ -475,6 +499,13 @@ form
         border-bottom: 1px solid #a5a5a5
         // color: #575454
         outline: none
+
+.inputbox:nth-child(4)
+    margin-bottom: 10px
+
+.submit-footer-form
+
+
 .focus .labeltext
     transform: translateY(-35px)
     font-size: 16px
