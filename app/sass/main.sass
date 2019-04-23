@@ -167,7 +167,6 @@ header
             transition: .5s
 
 .provide-products
-    // padding: 100px 0 100px
     background: #fafafa
     .provide-products-items
         transition: .1s
@@ -179,11 +178,43 @@ header
         cursor: pointer
         &:hover .provide-products-items
             transform: translateY(-40px)
-            transition: .1s
+            transition: .3s ease
             i
                 transform: translateY(-10px)
                 visibility: hidden
-                transition: .1s
+                transition: .1s ease
+        .item-footer
+            overflow: hidden
+            position: relative
+            height: 25px
+            .link
+                position: absolute
+                left: -100px
+                transition: .5s ease-out
+                color: #a6a7aa
+                &:after
+                    margin-left: 10px
+                    content: ''
+                    position: absolute
+                    width: 50px
+                    height: 2px
+                    top: 45%
+                    background: #17bed2
+                    transition: .5s ease-out
+        &:hover .link
+            left: 0
+            // transform: translateX(130%)
+            transition: .5s ease-out
+            &:after
+                width: 9px
+                height: 2px
+                transition: .5s ease-out
+
+
+            
+
+
+
 
 .latest-products
     background: linear-gradient(#fafafa, #fff)

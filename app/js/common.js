@@ -23,7 +23,7 @@ $(function () {
 			'scrollTop': $target.offset().top
 		}, 1000, 'swing');
 	});
-
+	//---------------------------------------------menu--------------------
 	$('.navbar-item').click(function () {
 		$(this).addClass('active-li');
 		$(this).siblings().removeClass('active-li');
@@ -155,12 +155,15 @@ $('.customer-reviews-images .owl-carousel').owlCarousel({
 
 //==============================toggle show=================================
 $(function () {
+	var active_id = null;
 	$('.showcase-button').click(function () {
-		var get_id = this.id;
-		var get_current = $('.column .' + get_id);
+		if (active_id != this.id) {
+			active_id = this.id;
+			var get_current = $('.column .' + active_id);
 
-		$('.blog-item').not(get_current).hide(500);
-		get_current.show(500);
+			$('.blog-item').not(get_current).hide(500);
+			get_current.show(500);
+		}
 	});
 
 	$('#showAll').click(function () {
@@ -179,10 +182,10 @@ $(function () {
 		$('.modall').hide();
 	});
 
-	$('.userinput').focus(function(){
+	$('.userinput').focus(function () {
 		$(this).parent().addClass('focus');
-	}).blur(function(){
-		if($(this).val() === ''){
+	}).blur(function () {
+		if ($(this).val() === '') {
 			$(this).parent().removeClass('focus');
 		}
 	});
