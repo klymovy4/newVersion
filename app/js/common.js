@@ -103,6 +103,7 @@ $(function () {
 			$(this).siblings('.hide-text').slideUp();
 		}
 	});
+
 });
 
 //=============owl-carousel===================
@@ -189,6 +190,7 @@ $(function () {
 			$(this).parent().removeClass('focus');
 		}
 	});
+
 });
 
 
