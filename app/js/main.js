@@ -24,6 +24,3 @@ function stopRotate(){
 }
 var download = document.getElementById('download');
 
-download.addEventListener('click', function () {
-    alert(123);
-});
