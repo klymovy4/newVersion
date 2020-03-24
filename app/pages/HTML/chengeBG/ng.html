@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <link href="ng.css" rel="stylesheet" type="text/css" />
+    <link href="slide.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="ng.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ng</title>
+</head>
+
+<body>
+
+
+    <div class="bt">
+        <button class='button a' onclick='changeColor()'>Изменить фон</button>
+        <button class='button b' onclick='myFunction()'>Показать текст</button>
+        <button id='ezednevnik' class='button'>Ежедневник</button>
+        <button class='button c' onclick='foo()'>Вычеслить процент</button>
+
+    </div>
+
+
+    <p class='p'>Здесь будет отображаться что-то.</p>
+
+    <div class="home11">
+        <h3>Ежедневник</h3>
+        <form name='dwsForm'>
+            <label>день недели:</label>
+            <select name="days">
+                <option>Monday</option>
+                <option>Tuesdat</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+                <option>Suturday</option>
+                <option>Sunday</option>
+            </select><br><br>
+            <textarea name="message" id="" cols="45" rows="5" placeholder="напишите текст заметки"></textarea><br><br>
+            <input type="button" value='Записать' onClick='btnClick();'>
+            <input class='raspechatat' type="button" value='Распечатать' onClick='prClick();'>
+        </form>
+        <br>
+        <div id="diary"></div>
+    </div>
+
+    <!-- не работае в джаваскрипте -->
+
+
+
+    <script>
+
+        var day = '',
+            text = '',
+            i = 1,
+            arrNotes = [],
+            form = document.dwsForm;
+
+        function btnClick() {
+            day = form.days.value;
+            text = form.message.value;
+            //   arrNotes.push('<div>'+i + '. Заметка на:' + day.bold()+'</div><div>'+ text+'<hr></div>');
+
+            arrNotes.push('<tr><td>' + i + '. Заметка на:' + day.bold() + '</td></tr><tr><td>' + text + '<hr></td></tr>');
+            //   arrNotes.push('<tr><td>'+i+'</td><td>Заметка на:' + day.bold()+'</td></tr>'+'<tr><td></td></td>'+text+'<hr></td></tr>');
+            i++;
+            form.reset();
+
+        }
+        // function prClick() {
+        //     document.getElementById('diary').innerHTML = '<table>' + arrNotes.join('') + '</table>';
+        // }
+
+    </script>
+    <script>
+//     var slide = document.getElementById('box');
+//     var image = [ 'bg1','bg2','bg3','bg4','bg5','bg6','bg7'];
+//     var i = image.lenght;
+// function for next slider
+// function next(){
+//   if(i<image.lenght){
+//     i = i+1;
+//   }else{
+//     i=1;
+//   }
+//   slide.innerHTML = '<img src='+image[i-1]+'.jpg>';
+// }
+
+
+    </script>
+</body>
+
+</html>

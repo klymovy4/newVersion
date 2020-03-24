@@ -27,10 +27,11 @@ ul.akkordion li {
     box-shadow: 1px 3px 15px #7e887e;
     transition: 1.5s;
 }
+.myImg {
+    height: 100%;
+}
 ul.akkordion img {
     width: 300px;
-    /*height: 225px;*/
-    
 }
 ul.akkordion li:hover {
     width: 300px;
@@ -48,5 +49,3 @@ ul.akkordion:hover li:nth-child(4) {
 ul.akkordion li:nth-child(4):hover {
     width: 300px;
 }
-
-/*иисуи*/

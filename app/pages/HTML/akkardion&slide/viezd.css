@@ -7,6 +7,9 @@ body {
 .h1 {
     text-align: center;
 }
+.a {
+    outline: 1px solid red;
+}
 .dws {
     height: 50vh;
     display: flex;
@@ -14,6 +17,7 @@ body {
     align-items: center;
 }
 .img-box {
+    overflow: hidden;
     position: relative;
     display: flex;
     align-items: center;
@@ -21,6 +25,7 @@ body {
 }
 .img-wrapper {
     display: flex;
+    width: 423px;
 }
 .img-box h4,
 .img-box p {
@@ -29,7 +34,7 @@ body {
     color: #ffffff;
     right: 100px;
     bottom: 70px;
-    padding: 10px 30px; 
+    padding: 10px 8px; 
     transition: 1s;
     transform: translateX(-200px);
     opacity: 0;
@@ -68,7 +73,7 @@ body {
     background: #2e81a7;
     border: 2px solid #383e42;
     border-radius: 0 10px 10px 0;
-    margin-left: -104px;
+    margin-left: -127px;
     transform: translateX(-20px);
     transition: 1s;
 }
