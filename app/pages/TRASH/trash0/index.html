@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="logo.css">
+    <script src="logo.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Unica+One" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Logo</title>
+</head>
+
+<body>
+    <div class="leftside">
+        <a class='ph ' href="#">По-ик</a>
+        <a class='vt' href="#">Вторник</a>
+
+    </div>
+
+    <div class="block">
+        <div id="up" class="up">
+            <h3>Проверяем функционал <a class='knopka' id='knopka'>кнопки </a>и <button id='knopka1'>отмена </button>
+                ее!</h3>
+            <!-- <button id ='knopka'>проверка!</button> -->
+            <div id='text'><i class="fa fa-hand-o-right"></i></div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="calc">
+            <form class='calcForm'>
+                <input class='val' id='val1' type="number"><br><br>
+                <input class='val' id='val2' type="number">
+                <p><strong>+</strong></p>
+                <p id='res1'><b></b></p>
+                <p><b>-</b></p>
+                <p id='res2'><b></b></p>
+                <p><b>*</b></p>
+                <p id='res3'><b></b></p>
+                <p><b>/</b></p>
+                <p id='res4'><b></b></p><br>
+            </form>
+        </div>
+    </div>
+    <div class="block">
+        <div class="check"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2 class='klmv4'>klmv4 </h2>
+    <script>
+        var js = 'https://learn.javascript.ru/',
+            jj = 'https://translate.google.ru/#en/ru/frame',
+            ss = 'http://facebook.com';
+
+        for (var i = 0; i < 4; i++) {
+            var a = 1953 + i;
+            var b = a + '.HTML';
+            if (a == 1953) {
+                b = js;
+            }
+            if (a == 1954) {
+                b = jj;
+            } if (a == 2010) {
+                b = ss;
+            }
+            $('.check').append('<a href="' + b + '">' + a + '</a><br>');
+            // document.write(i+'<br>');
+            // console.log(i);
+            // console.log(b);
+        }
+
+        var x = document.getElementById("knopka");
+        x.addEventListener("click", xFunction);
+        function xFunction() {
+            document.getElementById('text').innerHTML += 'получилось ';
+            //+'<br>'  можно использовать везде
+        }
+
+        //     var y = document.getElementById("second1");
+        // y.addEventListener("click", function(){
+        //     document.getElementById('first1').innerHTML += 'получилось'+'<br>';
+        //     });
+        var y = document.getElementById("knopka1");
+        y.addEventListener("click", yFunction);
+        function yFunction() {
+            x.removeEventListener("click", xFunction);
+        };
+    //эти функции добавляют и удаляют события к функциям.. Это очень полезно
+
+
+
+    </script>
+</body>
+
+</html>

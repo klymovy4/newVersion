@@ -1,0 +1,58 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+*{
+    transition: all 0.5s;
+}
+h3, h5{
+    text-align: center;
+}
+img{
+    
+    /* position: absolute; */
+    width: 445px;
+    margin: auto;
+}
+.img{
+    margin: 0;
+    display: none;
+  text-align: center;
+}
+#second_btn{
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+ 
+    /* margin: auto; */
+}
+
+#more{
+    margin-left: -75px;
+    width: 200px;
+    display: none;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+}
+#more:hover{
+    background: #000;
+    color: white;
+}
+#fin{
+    text-align: center;
+    display: none;
+}
+#second_btn:hover{
+    background: #000;
+    color: white;
+}
+.bt{
+    
+    display: none;
+    width: 10px;
+    margin: auto;
+    margin-bottom: 15px;;
+}
+
