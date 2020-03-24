@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="fotorama.js"></script>
+    <link rel="stylesheet" href="C:\folder\font-awesome-4.7.0\font-awesome-4.7.0\css\font-awesome.css">
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <!-- <script src='/lib/w3.js'></script> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="slideshow.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="slideshow.js"></script>
+    <title>slideshow</title>
+</head>
+<body>
+    <div class='slideshow-container fotorama' data-autoplay="true">
+        <div class='slides1 fad'>  
+            <!-- class fade не канает -->
+            <div class='number'>1</div>
+           <div><img src='img/bg1.jpg'></div> 
+           <div class='caption'>самое секретное место</div>
+        </div>
+        <div class='slides1 fad'>
+                <div class='number'>2</div>
+               <div><img src='img/bg2.jpg'></div> 
+               <div class='caption'>ремонт на югозападе</div>
+        </div>
+        <div class='slides1 fad'>
+                <div class='number'>3</div>
+               <div><img src='img/bg3.jpg'></div> 
+               <div class='caption'>кушаем</div>
+        </div>
+        <div class='slides1 fad'>
+                <div class='number'>4</div>
+               <div><img src='img/bg4.jpg'></div> 
+               <div class='caption'>лиська</div>
+        </div>
+        <div class='slides1 fad'>
+            <div class='number'>5</div>
+           <div><img src='img/bg5.jpg'></div> 
+           <div class='caption'>отдых с милой</div>
+    </div>
+    <div class='slides1 fad'>
+        <div class='number'>6</div>
+       <div><img src='img/bg6.jpg'></div> 
+       <div class='caption'>гудим с Шуркой и Лёхой</div>
+</div>
+<div class='slides1 fad'>
+    <div class='number'>7</div>
+   <div><img src='img/bg7.jpg'></div> 
+   <div class='caption'>ах, Лиська..</div>
+</div>
+        <span class='prev' onclick='plusIndex(-1)'>&#10094;</span>
+        <span class='next' onclick='plusIndex(+1)'>&#10095;</span>
+    </div>
+    <br/>
+    <div class="maindot">
+        <spam class="dots "  onclick = 'currentSlide(1)'></spam>
+        <spam class="dots "  onclick = 'currentSlide(2)'></spam>
+        <spam class="dots "  onclick = 'currentSlide(3)'></spam>
+        <spam class="dots "  onclick = 'currentSlide(4)'></spam>
+        <spam class="dots "  onclick = 'currentSlide(5)'></spam>
+        <spam class="dots "  onclick = 'currentSlide(6)'></spam>
+        <spam class="dots "  onclick = 'currentSlide(7)'></spam>
+    </div>
+
+
+<script type="text/javascript">
+    var slidesIndex=1;
+
+    showImage(slidesIndex);
+
+    function plusIndex(n){
+        showImage(slidesIndex += n); 
+    }
+
+    function currentSlide(n){  //  это для активации точек, которы тоже переключают фотки
+       showImage(slidesIndex = n);
+    }
+
+    function showImage(n){
+       
+        var slides = document.getElementsByClassName('slides1');
+        var dots1 = document.getElementsByClassName ('dots');
+
+        if (n > slides.length){slidesIndex = 1}; 
+        if (n < 1) {slidesIndex = slides.length}; 
+
+        for(var i = 0; i < slides.length; i++){  
+            slides[i].style.display = 'none';
+            
+        };
+       
+        
+        for(var i=0; i < dots1.length; i++){
+            dots1[i].className = dots1[i].className.replace('active','');
+           
+        
+        };
+        slides[slidesIndex-1].style.display = 'block';
+       
+        dots1[slidesIndex-1].className += 'active'; 
+     
+    }
+console.log(length);
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div id='slider'>
+    <div id='box'>
+        <img src='bg1.jpg'>
+    
+        
+        
+    </div>
+    
+    <button class="b leftright fa fa-chevron-left" onclick='prev()'></button>
+    <button class="a leftright fa fa-chevron-right" onclick='next()'></button>
+</div>
+<script>
+               var slider = document.getElementById('box');
+               var image = [ 'bg1','bg2','bg3','bg4','bg5','bg6','bg7'];
+               var i = image.lenght;
+               // function for next image
+
+
+           function next(){
+               if(i>image.lenght){
+                   i = i+1;
+               } else {
+                   i = 1;
+               }
+               slider.innerHTML = '<img src=../'+image[i-1]+'.jpg>';
+               }
+           function prev(){   
+                   if(i<image.lenght + 1 && i > 1){
+                       i = i-1;
+                   } else {
+                       i=image.lenght;
+                   }
+                   slider.innerHTML = '<img src='+image[i-1]+'.jpg>';
+                }
+                setInterval(next , 1000);
+</script> -->

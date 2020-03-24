@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>перестановка</title>
+</head>
+
+<body>
+    <input id='input' type="text" size='50px' placeholder="Введите шесть не повторяющихся символов.. .">
+    <button id='btn' onclick="go()">Go.. .</button>
+    <p></p>
+
+
+    <script>
+        function factorial(n) { // узнаю факториалом сколько существует перестановок.
+            if (n == 1) {
+                return 1;
+            } else {
+                return fact = factorial(n - 1) * n;
+            }
+        };
+
+        function go() {
+            var n = document.getElementById('input').value;
+            var a = n.split('');
+            var au = {};
+            a.forEach(function (d) {
+                au[d] = d;
+            });
+            var ac = Object.values(au);
+            // console.log(ac);
+            var permArr = [],
+                usedChars = [];
+
+            function permute(input) {
+                var i, ch;
+                for (i = 0; i < input.length; i++) {
+                    ch = input.splice(i, 1)[0];
+                    console.log(ch + '!');
+                    usedChars.push(ch);
+                    if (input.length == 0) {
+                        permArr.push(usedChars.slice());
+                    }
+                    permute(input);
+                    input.splice(i, 0, ch);
+                    usedChars.pop();
+                }
+                console.log(ch);
+                return permArr;
+            };
+
+            var p = document.querySelector('p');
+            var r = JSON.stringify(permute(ac));
+            // console.log(r);
+            r = r.replace(/],/g, '<br>');
+            r = r.replace(/,/g, '');
+            r = r.replace(/]/g, '');
+            r = r.replace(/\[/g, '');
+            r = r.replace(/"/g, '');
+            p.innerHTML = r;
+
+        }
+
+        // для перебора паролей. но перестановка/permutations это другое. 
+        // function sampling(chars, size, combinations) {
+
+        //        if (combinations.length==0) {
+        //            combinations = chars;
+        //        }
+        //        if (size == 1) {
+        //            return combinations;
+        //        }
+        //        var new_combinations = [];
+        //        combinations.forEach(function(combination) {
+        //            chars.forEach(function(char) {
+        //                new_combinations.push(combination + char);
+        //            });
+        //        });
+        //        return sampling(chars, size - 1, new_combinations);
+        //    }
+        //    console.log(sampling(ac,ac.length,[]));
+
+
+        // var p = document.querySelector('p');
+        // var btn = document.getElementById('btn');
+        // var fact = 0;
+        // var arr = [];
+        // var n = 231; // вот эта переменная  и ее не могу изменить в инпуте! 
+
+
+        // function go() {
+        //     var value = document.getElementById('input').value;
+        //     console.log(value);
+        //     n = value;
+
+        //     console.log(getLength(n));
+        //     console.log(factorial(getLength(n)));
+        //     console.log(arr);
+        //     rand();
+
+
+        //     //value = n; // хочу переприсвоить value инпута и не переприсваивается!
+        //     for (let i = 0; i < arrayUnique(arr).length; i++) {
+        //         document.write(arrayUnique(arr)[i] + '<br>');
+        //     };
+        //     return value;
+        // };
+
+        // function getLength(n) { // узнаю длину (сколько символов)
+        //     fact = PluginArray.length;
+        //     return fact; // 
+        // };
+
+        // function factorial(n) { // узнаю факториалом сколько существует перестановок.
+        //     if (n == 1) {
+        //         return 1;
+        //     } else {
+        //         return fact = factorial(n - 1) * n;
+        //     }
+        // };
+
+
+
+
+        // // уникальность еллементов в массиве НО НАДО ЭТОУ ПРОВЕРКУ ПОСТАВИТЬ В getRandom(a)  ЧТО БЫ НЕ СОЗДАВАЛСЯ БЕСТОЛКОВЫЙ МАССИВ, А ПОТОМ И З НЕГО НЕ ДЕЛАЛСЯ ДРУГО(БЕЗ ПОВТОРЕНИЙ.)
+        // function arrayUnique(arr) {
+        //     return arr.filter((e, i, a) => a.indexOf(e) == i);
+
+        // };
+
+        // function getRandom(a) {  // ПЕРЕБИРАЕМ ВСЕ ВОЗМОЖНІЕ КОМБИНАЦИИ И ЗАКИДЫВАЕМ ИХ В МАССИВ. НО НАДО ЕГО ВИЛЬТРОВАТЬ arrayUnique(arr) ЭТОЙ ФУНКЦИЕЙ
+        //     result = '';
+        //     var string = String(a); // переводим в строку
+        //     var array = string.split(''); // делаем масив
+        //     var i = array.length;
+        //     //console.log(array.length)  віводим на екран длину масива
+        //     while (array.length > 0) {
+        //         var randomElement = array[Math.floor(Math.random() * array.length)];
+        //         var index = array.indexOf(randomElement);
+
+        //         array.splice(index, 1);
+        //         i--;
+        //         result += randomElement;
+        //     }
+        //     // if (arr.filter((e, i, a) => a.indexOf(e) == i) == result) {  // ЄТОЙ ПРОВЕРКОЙ ХОТЕЛ ФИЛЬТРОВАТЬ ПОХОЖИЕ ЭЛЕМЕНТЫ, НО ЧТО ТО НЕ ПОЛУЧАЕТСЯ.
+
+        //     arr.push(result);
+        //     // }
+        //     // return randomElement;
+        // };
+
+        // function rand() { // ПОКА arrayUnique(arr).length  МЕНЬШЕ ЧИСЛА ФАКТОРИАЛА ДО ТЕХ ПОР БУДЕТ ЗАПУСКАТЬСЯ  getRandom(n);
+        //     console.log(arr);
+        //     for (let index = 0; arrayUnique(arr).length < fact; index++) {
+        //         getRandom(n);
+        //     }
+        // };
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+.clear{
+    clear: both;
+}
+#mainBg{
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+}
+body {
+    background: url("../img/new-york2.jpg");
+    background-position: center top;
+    background-size: cover;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+.wrapper{
+    align-content: center;
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+    /* height: 100%;  */
+    }
+      
+.header{
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    opacity: 0.6;
+}
+.time{
+    background: #000;
+    z-index: 999;
+    /* transition: 0.3s; */
+    /* outline: 1px solid orange; */
+    margin: 10px 10px;
+    float: right;
+    color: white;
+    font-size:1.4em;
+}
+.top-menu{
+    opacity: 0.6;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 5px;
+    height: 60px;
+} 
+
+.SignUp {
+    border: none;
+    color: white;
+    background: #000;
+    float: right;
+    cursor: pointer;
+    /* display: none; */
+}
+.LogIn{
+    border: none;
+    color: white;
+    background: #000;
+    cursor: pointer;
+    float: right;
+    margin-right: 5px;
+    /* display: none; */
+}
+.firstRegistrForm{
+    /* outline: 1px solid orange; */
+    /* z-index: -3;  */
+    /* box-shadow: inset 4px -3px 0px 1px #000000; */
+    /* color: blue; */
+    transition: 0.8s ease;
+    left: -25%;
+    position: relative;
+    /* opacity: 0.6; */
+    border: 1px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-radius: 5px;
+    background: #fff;
+    width: 23%;
+    height: 517px;
+    margin-top: 5px;
+    padding: 1px 0;
+    float:left;
+    margin-right: 5px;
+}
+.firstRegistrFormSlide{
+    /* color: white; */
+    left: 0;
+    
+}
+.inputbox {
+    /*outline: 1px solid orange;*/
+    margin: 0 0 20px;
+    position: relative; 
+}
+.labeltext{
+    position: absolute;
+    font-size: 16px;
+    color: #a5a5a5;
+    transition: .5s;
+    line-height: 55px;
+}
+.focus .labeltext { /* если убрать labeltext не плохо получается)*/
+    transform: translateY(-30px);  /*поднимание текста над полем */
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+
+}
+.userinput{
+    position: relative; 
+    /* это что бы можно было кликать в области текста */
+    background: transparent;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    color: #575454;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #a5a5a5;
+}
+
+.verno{
+    position: absolute;
+    background: none;
+    color:#a5a5a5;
+    width: 100%;
+    height: 35px;
+    border: none;
+    font-size: 18px;
+    bottom: 50px;
+    /* margin-left: 50%; */
+    cursor: pointer;
+    transition: .5s;
+    /* padding: 12px; */
+}
+.registerFormFirst{
+    /* box-shadow: 5px 5px 5px #a5a5a5; */
+    /* outline: 1px solid orange; */
+    padding: 30px 30px 340px 20px;
+    border-radius: 5px;
+    /* background: #fff; */
+    margin: auto auto;
+    /* margin: 49px auto 0 64px; */
+    position: absolute;
+    /* justify-content: right; */
+    /* text-align: center; */
+}
+.registerFormSecond{
+    /* box-shadow: 5px 5px 5px #a5a5a5; */
+    /* outline: 1px solid orange; */
+    padding: 30px 30px 230px 20px;
+    border-radius: 5px;
+    /* background: #fff; */
+    margin: auto auto;
+    /* margin: 49px auto 0 64px; */
+    position: absolute;
+    /* justify-content: right; */
+    /* text-align: center; */
+}
+.registerFormThird{
+    /* outline: 1px solid orange; */
+    padding: 30px 30px 410px 20px;
+    border-radius: 5px;
+    /* background: #fff; */
+    margin: auto auto;
+    /* margin: 49px auto 0 64px; */
+    position: absolute;
+}
+.registerFormFourth{
+    /* outline: 1px solid orange; */
+    padding: 100px 30px 260px 20px;
+    border-radius: 5px;
+    /* background: #fff; */
+    margin: auto auto;
+    /* margin: 49px auto 0 64px; */
+    position: absolute;
+}
+.secondRegistrForm{
+    position: relative;
+    /* box-shadow: inset 8px -2px 8px 2px #434343ba; */
+    margin-right: 5px;
+    border: 1px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    padding: 1px 0;
+    border-radius: 5px;
+    background: #fff;
+    width: 24%;
+    margin-top: 5px;
+    visibility: hidden;
+    /* height: 517px; */
+    height: 0;
+    float: left;
+    transition: 0.8s ease;
+}
+.secondRegistrFormSlide{
+visibility: visible;
+height: 517px;
+}
+.pForm2{
+    font-size: 16px;
+    color: #a5a5a5;
+    /* color:#575454; */
+}
+.thirdRegistrForm{
+    position: relative;
+    /* opacity: 0.6;  */
+    margin-right: 5px;
+    padding: 1px 0;
+    border: 1px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-radius: 5px;
+    background: white;
+    width: 0;
+    visibility: hidden;
+    /* width: 25%; */
+    margin-top: 5px;
+    height: 517px;
+    float: left;
+    transition: 0.8s ease;
+}
+.thirdRegistrFormSlide{
+    width: 25%;
+    visibility: visible;
+}
+.fourthRegistrForm{
+    transition: 0.8s ease;
+    border: 1px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    /* width: 24%; */
+    width: 0; 
+    visibility: hidden;
+    position: relative;
+    margin-right: 5px;
+    padding: 1px 0;
+    border-radius: 5px;
+    background: white;
+    
+    margin-top: 5px;
+    height: 517px;
+    float: right;
+    /* opacity: 0.6;    */
+} 
+.fourthRegistrFormSlide{
+    width: 24%;
+    visibility: visible;
+}
+.footer{
+   
+    opacity: 0.6;
+    width: 100%;
+    /* bottom: 0; */
+    /* margin-top: 5px; */
+    /* height: 120px; */
+    /* background: transparent; */
+}

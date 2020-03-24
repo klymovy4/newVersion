@@ -1,0 +1,439 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+  .container
+    max-width: 98%
+
+  .blog-home
+    grid-template-columns: repeat(3, 1fr)
+    
+  .blog-item
+    &:nth-child(8)
+      grid-column: 2/4
+
+  .portfolio-section
+    grid-template-columns: repeat(3, 1fr)
+    min-height: 40vh
+
+  // .portfolio-item
+  .flip-box
+    &:nth-child(3)
+      grid-area: 1/3/3/4
+    &:nth-child(4)
+      grid-area: 2/1/3/2
+      // grid-row: initial
+    &:nth-child(5)
+      grid-area: 3/1/4/3
+    // grid-column: 2/3
+    // grid-row: initial
+    &:nth-child(6)
+      grid-column: 3/4
+    &:nth-child(7)
+      grid-column: 4/2
+    &:nth-child(9)
+      grid-area: 4/1/5/2
+    &:nth-child(8)
+      grid-column: 1/3
+
+
+  .contacts-a
+    grid-template-columns: repeat(3, 1fr)
+    a:nth-child(7)
+      grid-column: 1/4
+    a
+      text-align: center
+
+  .images
+    grid-template-columns: repeat(2, 1fr)
+
+  .leftNavBar
+    left: 55px
+    /**/
+
+
+@media only screen and (max-width : 1070px)
+  .container
+    max-width: 99%
+
+  .navba a
+    padding: 5px 30px
+
+  .header-buttons .button
+    padding-right: 35px
+    padding-left: 35px
+
+  .toggles button
+    margin-top: 3px
+
+  .tweets
+    padding-right: 0
+
+  .contacts-a .fa
+    font-size: 30px
+
+  .portfolio 
+    h1
+      margin-bottom: 0
+    &-section
+      grid-template-columns: repeat(2, 1fr)
+
+  .flip-box
+    &:nth-child(1)
+      grid-column: 1/2
+    &:nth-child(2)
+      grid-area: 1/2/2/3
+    &:nth-child(3)
+      grid-area: 2/1/3/3
+    &:nth-child(6)
+      grid-area: 4/1/5/2
+    &:nth-child(4)
+      grid-area: 3/1/4/2
+    &:nth-child(5)
+      grid-area: 3/2/4/3
+    &:nth-child(7)
+      grid-area: 4/2/5/3
+    &:nth-child(9)
+      grid-area: 6/1/7/3
+    /**/
+
+
+@media only screen and (max-width : 1030px)
+  .footer-container
+    grid-template-columns: 50% 50%
+    width: 99%
+
+  .contacts
+    grid-column: 1/3
+    &-a
+      grid-template-columns: repeat(7, 1fr)
+    h4
+      text-align: center
+      margin-bottom: 10px
+
+  .contacts-a
+    a:nth-child(7)
+      grid-column: initial
+    a
+      padding-bottom: 15px
+
+  .close
+    top: 0
+    right: 15px
+
+  .portfolio h1
+    font-size: 24px
+
+  .mainFotorama h1
+    font-size: 24px   
+
+  .dws-container
+    width: 100%
+    display: none
+    position: static
+    // height: 250px
+
+  
+
+  .formbox
+    margin: 0
+    padding: 25px 5px 5px
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 10px
+    .buttonForm
+      grid-area: 2/3/4/4
+      width: 100%
+      align-self: flex-end
+
+
+  .inputbox
+    margin: 0 0 10px
+
+  .inputbox-textarea
+    grid-area: 2/1/3/3
+    align-items: flex-end
+
+
+  .inputbox[type='checkbpx']
+    grid-area: 1/3/5/5
+    // align-items: flex-start
+
+  .form-1030
+    display: block
+    background: linear-gradient( #414146, #1b1919)
+    text-align: center
+    border-bottom: 1px solid #80808000
+    h3
+      line-height: 1
+      margin-top: 0
+    form
+      grid-template-columns: repeat(2, 1fr)
+      padding: 0 15px 10px
+      grid-gap: 10px
+      div
+        margin-bottom: 10px
+        input
+          width: 100%
+          height: 33px
+      .personalDoc, a
+        color: white
+      div:nth-child(4)
+        grid-area: 1/2/4/3
+        textarea
+          width: 100%
+          height: 100%
+    .buttonForm
+      grid-area: 4/2/5/3
+      background: #040404
+        
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 990px)
+  .navbar, .leftNavBar
+    display: none
+
+  .hamburger
+    display: inline-block
+  
+  .header-content
+    top: 3%
+    h1
+      margin: 0
+      
+  .header-buttons
+    display: none
+    flex-direction: column
+    justify-content: flex-end
+    // transition: .5s ease
+    a
+      padding-top: 0
+  
+  .blog-home, .toggles
+    display: none
+    // grid-template-columns: 1fr 1fr
+    // .blog-item
+    //   min-height: 61vh
+    //   &:nth-child(3)
+    //     grid-column: 1/2
+    //   &:nth-child(5)
+    //     grid-column: 1/2
+    //   &:nth-child(7)
+    //     grid-column: 1/2
+    //   &:nth-child(8)
+    //     grid-column: 2/2
+    /**/
+
+  .forCarousel
+    display: block
+
+  .modal-content-log
+    width: 40%
+    top: 0
+
+  .portfolio
+    // margin-top: 0
+    padding-top: 0
+
+  .landing-section
+    padding-top: 0
+    margin-top: 5px
+    h2
+      padding-top: 15px
+      margin-top: 0
+
+  .mainFotorama h1
+    margin-top: 0
+    padding-top: 0
+
+  .tweets
+    padding: 0 15px
+
+  .portfolio-item
+    min-height: 60vh
+    
+
+
+
+ 
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+  .deep-footer
+    // background: lightblue
+
+  .tweets
+    padding: 15px
+
+  .modal-content
+    margin-top: 15%
+    width: 99%
+    height: auto
+
+  .modal-content-log
+    width: 75%
+    margin: 5% auto 0
+
+  .close
+    z-index: 20
+
+  .footer h4
+    margin: 5px
+
+  .landing-section
+    // margin: 15px
+
+  .buttonForm
+    max-height: 44px
+    width: 45%
+ 	/**/ 
+
+@media only screen and (max-width : 679px)
+  .portfolio
+    margin-top: 0
+    padding-top: 0
+
+  /* Extra Small Devices, Phones */
+@media only screen and (max-width : 620px)
+  .modal-content
+    margin-top: 17%
+    width: 99%
+    height: auto
+
+
+  .blog-item
+    &:nth-child(1)
+      grid-column: 1/3
+    &:nth-child(3)
+      grid-column: 1/3
+    &:nth-child(2)
+      grid-column: 2/3
+    &:nth-child(4)
+      grid-column: 1/3
+    &:nth-child(5)
+      grid-column: 1/3
+    &:nth-child(6)
+      grid-column: 1/3
+    &:nth-child(7)
+      grid-column: 1/3
+    &:nth-child(8)
+      grid-column: 1/3
+    &:nth-child(9)
+      grid-column: 1
+    // &:nth-child(2)
+    //   grid-column: 1/3
+
+  .flip-box
+    // &:nth-child(1)
+    //   grid-row: 1/2
+    &:nth-child(2)
+      grid-area: 2/1/3/2
+    &:nth-child(3)
+      grid-area: 3/1/4/2
+    &:nth-child(4)
+      grid-row: 4/5
+    &:nth-child(5)
+      grid-area: 5/1/6/2
+    &:nth-child(6)
+      grid-area: 6/1/7/2
+    &:nth-child(7)
+      grid-area: 7/1/8/2
+    &:nth-child(8)
+      grid-area: 8/1/9/2
+    &:nth-child(9)
+      grid-area: 9/1/10/2
+  
+
+  .portfolio-section
+    grid-template-columns: 1fr
+
+  // .portfolio-item
+  //   &:nth-child(1)
+  //     grid-column: 1/3
+
+  .footer-container
+    grid-template-columns: 1fr
+
+  .about-us
+    grid-column: 1/3
+    display: flex
+    flex-direction: column-reverse
+    p
+      margin-bottom: 0
+    h4
+      padding-top: 15px
+
+  .tweets
+    padding-top: 0
+    h4
+      padding-top: 0
+
+@media only screen and (max-width : 599px)
+  .portfolio
+    margin-top: -30px
+    
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+  .images
+    grid-template-columns: 1fr
+    grid-gap: 7px
+
+  .footer
+    padding-top: 0
+
+  .form-1030
+    background: linear-gradient( #414146, #1b1919)
+    padding-top: 10px
+    form
+      grid-template-columns: 1fr
+      div:nth-child(1)
+        grid-area: 1/1/2/2
+      div:nth-child(2)
+        grid-area: 2/1/3/2
+      div:nth-child(3)
+        grid-area: 3/1/4/2
+      div:nth-child(4)
+        grid-area: 4/1/5/2
+      .personalDoc
+        grid-area: 5/1/6/2
+      .buttonForm
+        grid-area: 6/1/7/2
+        width: 100%
+        background: #040404
+@media only screen and (max-width : 412px)
+  .portfolio
+    margin-top: -10px
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
