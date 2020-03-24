@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .forFff {
+            width: 200px;
+            height: 180px;
+        }
+        .ffff{
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+            font-size: 22px;
+            /* outline: 1px solid red; */
+        }
+
+        .rotateFfff {
+            animation-name: wing;
+            animation-duration: 0.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes wing {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="forFff">
+        <h4 class='ffff '>Мигающий заголовок</h4>
+
+    </div>
+
+    <h3 class="mouseMove">Mousemove</h3>
+    <div id="id">111<span>222</span> 333</div>
+
+    <div id="hakerMova1">qq</div>
+
+
+    <button id='btn'>button</button>
+
+    <h1 class="hell">Hello!</h1>
+
+    <h1 class='tryEvent'>Hello I try Event!</h1>
+
+    <h2>Это сползает</h2>
+
+    <ul>
+        <li>list item 1</li>
+        <li>list item 2</li>
+        <li>list item 3</li>
+        <li>list item 4</li>
+        <li>list item 5</li>
+    </ul>
+
+    <div class="myFriends">
+
+    </div>
+    <div class="ttt">
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src='main.js'></script>
+    <script>
+        var input = 'javascript is awesome',
+            hakerMova = '',
+            x = document.getElementById('hakerMova1');
+
+        for (var i = 0; i < input.length; i++) {
+            if (input[i] == 'a') {
+                hakerMova += '4';
+            } else {
+                hakerMova += input[i];
+            }
+        }
+        console.log(hakerMova);
+
+        x.innerHTML = hakerMova;
+
+
+        var id = document.getElementById('id');
+    </script>
+</body>
+
+</html>

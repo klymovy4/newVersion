@@ -3,12 +3,14 @@ body{
     margin: 0;
     font-family: 'Encode Sans Condensed', sans-serif;
     color:#333;
-    /* font-family: 'Shrikhand', cursive; */
+    font-family: 'Shrikhand', cursive;
 
 }
 .grid{
   display: grid;
 }
+
+
 .main-header{
   
     /* background-image: url(bg.jpg); */
@@ -53,8 +55,12 @@ body{
     padding-bottom: 60px 10px;
   
 }
-.header-content h3{
+.header-content h3, a{
   font-family: 'Shrikhand', cursive;
+}
+.header-content a:hover {
+  text-decoration: none;
+  color: white;
 }
 .header-buttons{
   /* color:black; */

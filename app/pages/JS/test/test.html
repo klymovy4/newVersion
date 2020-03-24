@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type='file' accept='text/plain' onchange='openFile(event)'><br>
+    <div id='output'>
+        ...
+    </div>
+
+    <script>
+        function isEven(n) {
+            n = Number(n);
+            return n === 0 || !!(n && !(n % 2));
+        }
+
+        function isOdd(n) {
+            return isEven(Number(n) + 1);
+        }
+
+        function isVowel(c) {
+            // игнор пробелов
+            if (c == ' ') return true;
+            return ['a', 'e', 'i', 'o', 'u', 'а', 'й', 'е', 'а', 'о', 'э', 'и', 'ю', 'у'].indexOf(c.toLowerCase()) !== -
+                1
+        }
+
+        function isConsonant(c) {
+            // игнор пробелов
+            if (c == ' ') return true;
+            return !isVowel(c);
+        }
+
+        function hasOnlyVowels(s) {
+            if (typeof s == 'undefined') return false;
+            if (s == '') return false;
+            // console.log(s);
+            for (var i = 0; i < s.length; i++) {
+                if (!isVowel(s[i])) return false;
+            }
+            return true;
+        }
+
+
+        function hasOnlyConsonants(s) {
+            if (typeof s == 'undefined') return false;
+            if (s == '') return false;
+            // console.log(s);
+            for (var i = 0; i < s.length; i++) {
+                if (!isConsonant(s[i])) return false;
+            }
+            return true;
+        }
+        // var text = "1:й\r\n2:ацаца\r\n3:\r\n4:Ъ\r\n5: “\r\n";
+        // var a = JSON.parse(text);
+        // console.log(a);
+
+
+        // 2. Вывести строки из файла, содержащие только парные цифры
+        // even number
+        function filterEvenNumbers(s) {
+            var result = '';
+            // разбить строку (файл) со множеством строчек на массив
+            var a = s.split("\n");
+            // для каждой строчки в файле
+            for (var i = 0; i < a.length; i++) {
+                var line = a[i];
+                // по заданию допустим, что цифры только перед :
+                var c = line.split(':');
+                // в c[0] цифра
+                if (isEven(c[0])) {
+                    result += line + "\n";
+                }
+
+            }
+            return result;
+        }
+
+        // 3. Вывести строки из файла, содержащие только гласные буквы
+        function filterOnlyVowels(s) {
+            var result = '';
+            // разбить строку (файл) со множеством строчек на массив
+            var a = s.split("\n");
+            // для каждой строчки в файле
+            for (var i = 0; i < a.length; i++) {
+                var line = a[i];
+                var c = line.split(':');
+                // игнорировать цифры и разделитель
+                if (hasOnlyVowels(c[1])) {
+                    result += line + "\n";
+                }
+
+            }
+            return result;
+        }
+
+
+        // 4. Создать ассоциативный массив из данных файла
+        function createAssociativeArray(s) {
+            var r = new Array();
+            // разбить строку (файл) со множеством строчек на массив
+            var a = s.split("\n");
+            // для каждой строчки в файле
+            for (var i = 0; i < a.length; i++) {
+                var line = a[i];
+
+                // по заданию допустим, что цифры только перед :
+                let c = line.split(':');
+
+                // в c[0] цифра
+                // c[1] текст
+                r[c[0]] = c[1];
+            }
+            return r;
+        }
+
+
+        // 5. Вывести элементы массива, чьи ключи содержат только парные цифры
+        function filterArrayEvenKeys(a) {
+            var b = new Array();
+            a.forEach(function (e, i) {
+                //console.log(e);
+                if (isEven(i)) {
+                    b[i] = e;
+                }
+            });
+            return b;
+        }
+
+        // 6. Вывести элементы массива, чьи значения содержат только согласные буквы
+        function filterArrayСonsonantValue(a) {
+            var b = new Array();
+            a.forEach(function (e, i) {
+                //console.log(e);
+                if (hasOnlyConsonants(e)) {
+                    b[i] = e;
+                }
+            });
+            return b;
+        }
+
+
+        // 1. Загрузить данные из файла
+        var openFile = function (event) {
+            var input = event.target;
+
+
+            var reader = new FileReader();
+            reader.onload = function () {
+                var text = reader.result;
+                var node = document.getElementById('output');
+                node.innerText = text;
+
+                // console.log(JSON.stringify([text]));
+                //console.log(reader.result.substring(0, 200));
+
+                //console.log(filterEvenNumbers(text));
+
+
+
+            };
+            reader.readAsText(input.files[0]);
+        };
+
+        // text = "1:й\n" +
+        //     "2:ацаца\n" +
+        //     "3:бб\n" +
+        //     "4:Ъ\n" +
+        //     "5: “";
+
+
+        text = "1:й" + '\n' +
+            "2:ацаца" + '\n' +
+            "3:бб" + '\n' +
+            "4:Ъ" + '\n' +
+            "5: “";
+
+
+
+
+
+
+        // console.log(filterOnlyVowels(text));
+        //console.log(createAssociativeArray(text));
+
+
+
+
+
+
+
+        console.log("2. Вывести строки из файла, содержащие только парные цифры");
+        console.log("3. Вывести строки из файла, содержащие только гласные буквы");
+        console.log("4. Создать ассоциативный массив из данных файла");
+        var a = createAssociativeArray(text);
+        console.log(a);
+        console.log("5. Вывести элементы массива, чьи ключи содержат только парные цифры");
+        var b = filterArrayEvenKeys(a);
+        console.log(b);
+        console.log("6. Вывести элементы массива, чьи ключи содержат только согласные буквы");
+        var c = filterArrayСonsonantValue(a);
+        console.log(c);
+
+
+
+
+
+
+        console.log(c);
+    </script>
+</body>
+
+</html>
