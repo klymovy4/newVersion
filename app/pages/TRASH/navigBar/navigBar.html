@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+    <link href="navigbar.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="navigbar.js"></script>
+</head>
+
+<body>
+
+
+    <ul class='top-first'>
+        <li class='li la' onclick="openNav()" id="main"><a href='#'>&#9776;</a></li>
+        <li class='dropdown li'><a href='#'>Home</a></li>
+        <li class='dropdown li'><a href='#'>News</a></li>
+        <li class='dropdown li'><a href='#'>Music</a></li>
+        <li class='dropdown li'><a href='#'>Video</a></li>
+        <li class='dropdown li'><a href='#'>HOME</a></li>
+        <li class='dropdown li contacts'><a href='#'>Contacts</a>
+            <div class='dropdown-content' style='right:0;'>
+                <a>Klymovych Roman +380976832772</a>
+            </div>
+        </li>
+        <li class='dropdown li login'><a href='#'>Login</a></li>
+    </ul>
+    <div id='mySidenav' class='sidenav'>
+        <a href='#' class='closebtn' onclick='closeNav()'>&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+    <div id="id01" class='modal'>
+        <form class='modal-content animate' action="/action_page.php">
+            <span onclick='document.getElementById ("id01").style.display="none"' class='close'
+                title='Close Modal'>&times;</span>
+
+            <div class='imgcontainer'>
+                <img src='1.jpg' alt='Avatar' class='avatar'>
+            </div>
+            <div class='container' >
+                <label><b>Username</b></label>
+                <input id='qwer' type='text' placeholder="Enter User Name" name='uname' required>
+                <label><b>Password</b></label>
+                <input id='qwe' type='password' placeholder="Enter Password" name='uname' required>
+                <button id='log' type='submit'>Login</button>
+                <label> <input type='checkbox' checked='checked'>Remember me</label>
+            </div>
+            <div class='container' style='background-color:#f1f1f1'>
+                <!-- <button type='button' onclick='document.getElementById(' id01').style.display='none''
+                            class=' cancelbtn'>Cancel</button>
+                <span class='psw'>Forgot <a href='#'>password?</a></span> -->
+            </div>
+        </form>
+    </div>
+
+
+
+</body>
+
+</html>

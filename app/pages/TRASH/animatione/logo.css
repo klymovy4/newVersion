@@ -1,0 +1,66 @@
+body{
+    /* transform: rotate(1deg); */
+}
+.wrapper{
+    position: relative;
+    width: 600px;
+    height: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+.foto{
+    width: 600px;
+    height: 800px;
+   
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.wing{
+    z-index: 1;
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 200px;
+    right: 217px;
+    animation-name: wing;
+    animation-duration: 0.6s;
+    animation-iteration-count: infinite; /*;  3*/
+    animation-timing-function: linear;
+}
+@keyframes wing {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+
+}
+.cl1{
+    /* background: url(cl1.png); */
+    position: absolute;
+    width: 200px;
+    height: auto;
+    left: -250px;
+    top: 150px;
+
+    /* transform: scale(.5, .5); */
+    animation-name: cl1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite; /*;  3*/
+    animation-timing-function: linear;
+}
+@keyframes cl1 {
+     0% {left: -250px;}
+    25% {left: 200px;}
+   /* 100% {left: 200px; transform: rotate(180deg);} */
+   100% {left: 700px; } 
+     /* 25% { transform: rotate(180deg);} */
+   /*   25% {left: 510px; transform:rotate(180deg);} */
+    /* 50% {left: 700px;} */
+    /* 51% {left: 700px;}
+    100% {left: -300px;} */
+    
+}
+.cl2{
+    position: absolute;
+    width: 90px;
+    height: auto;
+}

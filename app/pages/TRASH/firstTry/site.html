@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="site.css">
+    <script type="text/javascript" src="site.js"></script>
+    <link rel="stylesheet" href='css/media.css' media='all and (max-width: 820px)'>
+    <title>Document</title>
+</head>
+<body>
+    <div class="dws-wrapper">
+            <img src="1.png">
+        <div class="header">
+            <nav class="dws-menu">
+                    <ul class="top-menu">
+                            <li><a href="#">новости</a></li>
+                            <li><a href="#">блог</a></li>
+                            <li><a href="#">статьи</a>
+                                <ul>
+                                        <li><a href="#">новости</a></li>
+                                        <li><a href="#">блог</a></li>
+                                        <li><a href="#">статьи</a>
+                                            <ul>
+                                                <li><a href="#">новости</a></li>
+                                                <li><a href="#">блог</a></li>
+                                                <li><a href="#">статьи</a></li>
+                                                <li><a href="#">портфолио</a></li>
+                                                <li><a href="#">контакты</a></li>
+                                            </ul> 
+                                        </li>
+                                        <li><a href="#">портфолио</a></li>
+                                        <li><a href="#">контакты</a></li>
+                                    </ul> 
+                            </li>
+                            <li><a href="#">портфолио</a></li>
+                            <li><a href="#">контакты</a>
+                                <ul class="top-menu">
+                                        <li><a href="#">новости</a></li>
+                                        <li><a href="#">блог</a></li>
+                                        <li><a href="#">статьи</a>
+                                            <ul>
+                                                    <li><a href="#">новости</a></li>
+                                                    <li><a href="#">блог</a></li>
+                                                    <li><a href="#">статьи</a></li>
+                                                    <li><a href="#">портфолио</a></li>
+                                                    <li><a href="#">контакты</a></li>
+                                                </ul> 
+                                        
+                                        </li>
+                                        <li><a href="#">портфолио</a></li>
+                                        <li><a href="#">контакты</a></li>
+                                    </ul> 
+                            </li>
+                        </ul> 
+            </nav>
+           <!-- <div class="banner"><img src="http://via.placeholder.com/1000x250" alt=""></div> -->
+           <div class="banner"><img src="1.jpg"></div>
+        <!-- </div> -->
+        <div class="container">
+            <div class="sidebar">
+                <ul class="sidebar-menu">
+                    <li><a href="#">blablacar</a></li>
+                    <li><a href="#">couchserfing</a></li>
+                    <li><a href="#">taxi</a></li>
+                    <li><a href="#">sex</a></li>
+                    <li><a href="#">fuck</a></li>
+                    <li><a href="#">rock band</a></li>
+                </ul>
+                <img class ='myImg ' src="img/bg1.jpg" alt="гуляем">
+                <img class ='myImg ' src="img/bg7.jpg" alt="во всю гуляем">
+            </div>
+            <div class="content">
+                <h1>Lorem ipsum, dolor sit amet </h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorem minima exercitationem doloribus.</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisici
+                    ng elit. Possimus temporibus omnis voluptate!</p>
+                    <div class="box-text">
+                        <img src="http://via.placeholder.com/200x150">
+                        <div class="text">
+                                <h2>Lorem ipsum dolor sit amet consectetur,
+                                      alias doloremque.</h2>
+                                     <p>Lorem ipsum Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, animi.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, adipisci. dolor sit amet consectetur adipisicing elit. Deleniti, enim. Quod, atque.</p>
+                        </div>
+                       
+                    </div>
+                    <div class="box-text">
+                            <!-- <img src="http://via.placeholder.com/200x150"> -->
+                            <img src="http://via.placeholder.com/200x150">
+                            <div class="text">
+                                    <h2>Lorem ipsum dolor sit amet consectetur,
+                                          alias doloremque.</h2>
+                                         <p>Lorem ipsum Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, animi.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, adipisci. dolor sit amet consectetur adipisicing elit. Deleniti, enim. Quod, atque.</p>
+                            </div>
+                           
+                        </div>
+                        <div class="box-text">
+                                <video id='vid' class='myImg1' onclick="makeBig()" width="200" height="194" controls>
+                                        <source src="Vienna.mp4" type="video/mp4">
+                                        <source src="Vienna.ogg" type="video/ogg">
+                                        Your browser does not support HTML5 video.
+                                </video>
+                                <!--<img src="http://via.placeholder.com/200x150">-->
+                                <div class="text a">
+                                        <h2>Lorem ipsum dolor sit amet consectetur,
+                                              alias doloremque.</h2>
+                                             <p>Lorem ipsum Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, animi.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque, adipisci. dolor sit amet consectetur adipisicing elit. Deleniti, enim. Quod, atque.</p>
+                                </div>
+                        </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>уроки игры на гитаре</p>
+            </div>
+            <div>
+                <img src="http://via.placeholder.com/200x150">
+            </div>
+    </div>
+    <!--<script>
+        var myVideo = document.getElementById ('vid');
+        function makeBig() {
+            myVideo.width = 500;
+        }
+    </script>-->
+    <!-- modal картинка по клику выезжает на темном экране -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" src="">
+       
+        <div id="caption"></div>
+
+    </div>
+    
+    <!-- --------------------------------tak nado------------------- -->
+</body>
+</html>

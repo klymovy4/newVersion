@@ -1,0 +1,14 @@
+$(document).ready(function(){
+    $('.myImg').click(function(){
+        $('.modal-content').attr('src',this.src);
+        $('#caption').html(this.alt);
+        $('.modal-content').attr('src',this.src);
+        $('.modal').show();
+    })
+    $('.close').click(function(){
+        $('.modal').hide();
+    })
+    $('.modal').click(function(){
+        $(this).hide();
+    })
+})
