@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+  display: flex;
+  justify-content: flex-start;
+}
+
+ul li {
+  padding: 15px 22px;
+  background: rgb(148, 126, 126);
+  cursor: pointer;
+  list-style: none;
+  margin: 0 3px;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  /* margin: 0 7px; */
+}
+ul li:hover{
+  background: rgb(95, 83, 83);
+}
+
+.active_b{
+  background: rgb(95, 83, 83);
+}
+
+.tabs__content {
+  display: none; /* по умолчанию прячем все блоки */
+}
+.tabs__content.active {
+  display: block; /* по умолчанию показываем нужный блок */
+}

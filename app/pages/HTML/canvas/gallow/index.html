@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Виселица</title>
+</head>
+
+<body>
+    <div class="flip-box">
+
+        <div id='flip-box-inner' class="flip-box-inner">
+            <div class='mainBlock'>
+                <h2>Отгадай слово</h2>
+                <div id="word" class='word'></div>
+
+                <form name='gallows' action="">
+                    <input id='text' name="numeral" type="text" maxlength="1" pattern='\d'
+                        placeholder="Введите букву тут">
+
+                    <input type="button" value="Попробовать букву" onClick='btnClick();'>
+
+                </form>
+            </div>
+            <div class="flip-box-back">
+                <button id='exit'>Exit</button>
+                <button id='again'>Again</button>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div id="modalWindow" class="modalWindow">
+        Такой буквы нет, товарищь!!
+    </div>
+    <!-- <div id="hide"></div> -->
+
+
+    <canvas id='canvas' width='200' height='200' style='border:1px solid black;'></canvas>
+
+
+
+
+
+
+
+
+    <!-- <script src='main-2.js'></script> -->
+    <!-- <script src='main.js'></script> -->
+    <script src='gallows.js'></script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+body{
+    height: 100vh;
+    background-image: url("img/ep_naturalwhite.png");
+}
+
+.dws-wrapper {
+    max-width: 650px;
+    margin: auto;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul.akkordion {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+ul.akkordion li {
+    width: 50px;
+    overflow: hidden;
+    padding: 1px 1px 0 0;
+    cursor: pointer;
+    display: block;
+    -webkit-box-shadow: 1px 3px 15px #7e887e;
+    -moz-box-shadow: 1px 3px 15px #7e887e;
+    box-shadow: 1px 3px 15px #7e887e;
+    transition: 1.5s;
+}
+.myImg {
+    height: 100%;
+}
+ul.akkordion img {
+    width: 300px;
+}
+ul.akkordion li:hover {
+    width: 300px;
+    -webkit-box-shadow: 1px 3px 15px #36c5fa;
+    -moz-box-shadow: 1px 3px 15px #36c5fa;
+    box-shadow: 1px 3px 15px #36c5fa;
+    transition: 1s;
+}
+ul.akkordion li:nth-child(4) {
+    width: 300px;
+}
+ul.akkordion:hover li:nth-child(4) {
+    width: 50px;
+}
+ul.akkordion li:nth-child(4):hover {
+    width: 300px;
+}
