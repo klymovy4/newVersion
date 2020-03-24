@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr" ng-app="mmh">
+
+<head>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    </head>
+    <title>time</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 100vh;
+            background: black;
+            display: flex;
+        }
+
+        .time {
+            font-size: 58px;
+            margin: auto;
+            width: 300px;
+            height: 67px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+    <div class="container">
+        <div id='time' class='time'>Time</div>
+    </div>
+
+
+
+
+
+    <div class="lostTime"></div>
+
+
+    <script>
+        var a = document.querySelector('#time');
+
+        setInterval(function () {
+            var d = new Date();
+            function av(a) {
+                if (a < 10) {
+                    return '0' + a
+                } else {
+                    return a
+                }
+
+            }
+            a.innerHTML = (d.getHours() + ' : ' + av(d.getMinutes()) + ' : ' + av(d.getSeconds()));
+
+        }, 1000)
+    </script>
+</body>
+
+</html>
