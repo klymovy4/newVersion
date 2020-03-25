@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="500px" height="300px" style="border: 1px solid red"></canvas>
+</body>
+
+
+
+
+<script>
+    var can = document.getElementById('canvas');
+    can.height = 700; can.width = 1000;
+    var ctx = can.getContext('2d');
+    var x = 150, y = 150;
+
+
+    function drawDown() {
+        ctx.beginPath();
+        ctx.arc(x, y, 20, 0, 2 * Math.PI);
+        ctx.fillStyle = 'rgba(250,0,0,0.4)';
+        ctx.fill();
+        y += 3
+        ctx.fillStyle = "rgba(34,45,23,0.4)";
+        // ctx.fillRect(0, 0, can.width, can.height);
+        requestAnimationFrame(drawDown);
+        if (y > (can.height - 20)) {
+            drawUp()
+        }
+    }
+
+    function drawUp() {
+        ctx.beginPath();
+        ctx.arc(x, y, 20, 0, 2 * Math.PI);
+        ctx.fillStyle = 'rgba(250,0,0,0.4)';
+        ctx.fill();
+        y-=3;
+        ctx.fillStyle = "rgba(34,45,23,0.4)";
+        // ctx.fillRect(0, 0, can.width, can.height);
+        requestAnimationFrame(drawUp);
+        if (y < 20) {
+            drawDown();
+        }
+    }
+
+    function drawLeft() {
+        ctx.beginPath();
+        ctx.arc(x, y, 20, 0, 2 * Math.PI);
+        ctx.fillStyle = 'rgba(250,0,0,0.4)';
+        ctx.fill();
+        x -= 3
+        ctx.fillStyle = "rgba(34,45,23,0.4)";
+        // ctx.fillRect(0, 0, can.width, can.height);
+        requestAnimationFrame(drawLeft);
+        if (x < 20) {
+            drawRight();
+        }
+    }
+
+    function drawRight() {
+        ctx.beginPath();
+        ctx.arc(x, y, 20, 0, 2 * Math.PI);
+        ctx.fillStyle = 'rgba(250,0,0,0.4)';
+        ctx.fill();
+        x += 3
+        ctx.fillStyle = "rgba(34,45,23,0.4)";
+        // ctx.fillRect(0, 0, can.width, can.height);
+        requestAnimationFrame(drawRight);
+        if (x > (can.width-20)) {
+            drawLeft();
+        }
+    }
+
+    document.addEventListener("keyup", function (e) {
+        if (e.keyCode === 38) {
+            drawUp()
+        } else if (e.keyCode === 39) {
+            drawRight();
+        } else if (e.keyCode === 37) {
+            drawLeft();
+        } else if (e.keyCode === 40) {
+            drawDown();
+        }
+    })
+    drawDown();
+
+
+</script>
+
+</html>
