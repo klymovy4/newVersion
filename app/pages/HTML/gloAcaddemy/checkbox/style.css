@@ -2,6 +2,7 @@ body {
     margin: 0;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #42a5f5;
@@ -11,6 +12,7 @@ body {
     visibility: hidden;
 }
 .checkbox-group {
+    margin-top: 20px;
     position: relative;
     width: 80px;
     background-color: #333;
