@@ -33,7 +33,7 @@
                     aria-label="Toggle navigation"><span class="toggler-icon">Menu</span>
                 </button>
 
-                <div class="asd collapse navbar-collapse" id="navbarNavDropdown">
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="navbar-item active-li">
                             <a href="#main-section" class="nav-link">HOME</a>
@@ -55,7 +55,8 @@
                                 <a class="dropdown-item" href="pages/HTML/tabs/index.html">Tabs</a>
                                 <a class="dropdown-item" href="pages/HTML/videoFullScreen/index.html">Video All
                                     Screen</a>
-                                <a class="dropdown-item" href="pages/HTML/gloAcaddemy/checkbox/index.html">Glo Academy</a>
+                                <a class="dropdown-item" href="pages/HTML/gloAcaddemy/checkbox/index.html">Glo
+                                    Academy</a>
                                 <a class="dropdown-item" href="pages/HTML/animatePage/index.html">Animate Page</a>
 
                                 <a id='canvas' class="dropdown-item" href="#" data-toggle="dropdown"
@@ -147,7 +148,7 @@
         <div class="container">
             <div class="main-section-content">
                 <h1>You can burn bud and still be a success.</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, voluptatum!</p>
+                <p id='time'>https://www.youtube.com/watch?v=hTXAWbeNiBU</p>
                 <a href="pages/page1.html" target='_blank' id='download' class='btn'>Down1load</a>
 
             </div>
@@ -159,16 +160,49 @@
             <div class="pt-2 provide-products-content row">
 
                 <div class="cards col-lg-7 col-md-6 p-1">
-                    <div class="card p-5 shadow d-flex justify-content-between h-100">
-                        <div class="provide-products-items text-left">
-                            <i class="fas fa-atom animated mov1 pb-4"></i>
-                            <h3 class="card-title">Art Of Coding</h3>
-                            <p class='card-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
-                                neque.</p>
+                    <div class="card p-5 shadow d-flex justify-content-between h-100 a">
+                        <div class="weather-title">
+                            <i class="fas fa-temperature-low"></i>
+                            <h3>Wheather</h3>
+                            <h2 id="currentCity" class="mb-3">Хмельницкий</h2>
                         </div>
-                        <div class="item-footer ">
-                            <a href="#" class="link">Подробнее</a>
+                        <div class="main-info">
+
+                            <div class="weather-top">
+                                <form id="weatherForm" class="weatherForm">
+                                    <div class="form-group mr-3 mb-3">
+                                        <label for="city" class="sr-only">City</label>
+                                        <input type="text" class="form-control" id="cityInput" placeholder="City">
+                                    </div>
+                                    <button id="showWeather" type="submit" class="btn btn-primary">Show
+                                        Weather
+                                    </button>
+                                    <span id="error"></span>
+                                </form>
+                                <!-- <div id="sun" class="text-right">
+                                    <i class="fas fa-sun"></i>
+                                    <h3 class="mb-2 weekday"></h3>
+                                </div> -->
+                                <!-- <div id="localTime">
+                                    
+                                </div> -->
+                            </div>
+
+
+
+                            <h5 class="days text-light mb-3">
+                                <span id="day"></span>
+                            </h5>
+                            <div id="weatherMainBlock" class="weather-main-block"></div>
+                            <div class="anotherCity-block">
+                                <button id="anotherCity" class="btn btn-primary">Another City</button>
+                            </div>
                         </div>
+
+
+
+
+
 
                     </div>
                 </div>
@@ -458,7 +492,7 @@
     <section id='showcase' class="showcase pt-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-12">
                     <h2>Showcase</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem fuga rerum recusandae
                         voluptatem. Deleniti
@@ -712,6 +746,7 @@
 
     <link rel="stylesheet" href="css/main.min.css">
     <script src="js/main.js"></script>
+    <script src="js/dateWeather.js"></script>
     <script src="js/scripts.min.js"></script>
 </body>
 

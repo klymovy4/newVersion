@@ -88,7 +88,7 @@ header
             display: none
     .toggler-icon
         color: white
-    .asd
+    .navbar-collapse
         justify-content: flex-end
     .navbar-item
         cursor: pointer
@@ -150,12 +150,12 @@ header
     height: 100%
     width: 100%
     background-position: center
+    font-family: 'Shrikhand', cursive
     h1
         font-size: 50px
         font-weight: 700
         color: #fff
         margin: 0 0 15px 0
-        font-family: 'Shrikhand', cursive
     p
         color: #a6a7aa
     button
@@ -173,7 +173,19 @@ header
     i
         font-size: 30px
         color: #999caa
-        // transition: .1s
+    .weather-title
+        font-family: 'Shrikhand', cursive
+        display: flex
+    .weather-top 
+        .fa-sun 
+            font-size: 43px
+            color: yellow
+            animation: rotating 5s linear infinite
+        #cityInput
+            background: #fafafa
+        .form-control
+            color: black
+            font-family: 'Shrikhand', cursive
     .cards
         cursor: pointer
         &:hover .provide-products-items
@@ -586,6 +598,9 @@ form
   animation-name: zoom
   animation-duration: 0.6s
 
+
+
+
 @-webkit-keyframes zoom
   from
     -webkit-transform: scale(0)
@@ -601,3 +616,7 @@ form
   to
     transform: scale(1)
 @import "media" // Всегда в конце
+
+@keyframes rotating 
+    0% {transform: rotate(0deg)}
+    100% {transform: rotate(360deg)}
