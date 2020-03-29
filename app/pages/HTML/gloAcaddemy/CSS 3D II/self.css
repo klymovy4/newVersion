@@ -7,7 +7,7 @@
     transform-style: preserve-3d;
     perspective: 1000px;
     transition: 0.5s;
-    transform-origin: center top;
+    transform-origin: center left;
     /* z-index: 20; */
 }
 .self {
