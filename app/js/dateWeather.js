@@ -7,7 +7,7 @@ const weekday = { weekday: 'long' };
 const weekdayShort = { weekday: 'short' };
 const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 const innerDay = document.querySelector("#day")
-const localTime = document.querySelector("#localTime")
+// const localTime = document.querySelector("#localTime")
 const cityInput = document.querySelector("#cityInput")
 const showWeatherBtn = document.querySelector("#showWeather")
 const anotherCityBtn = document.querySelector("#anotherCity")
@@ -27,9 +27,9 @@ function innerZiro(n) {
         return n
     }
 }
-function showDate() {
-    return innerDay.innerHTML = innerZiro(day) + "/" + innerZiro(month + 1) + "/" + year;
-};
+// function showDate() {
+//     return innerDay.innerHTML = innerZiro(day) + "/" + innerZiro(month + 1) + "/" + year;
+// };
 
 // Date END ===============================================
 // Weather ================================================
@@ -57,22 +57,26 @@ const renderWether = (weather) => {
     // console.log(weather);
     const div = `
     <div class="row mb-2">
-    <div id="localTime">
-            ${showTime1(weather)}                        
-    </div>
+
         <div class="col-12 col-md-3 mb-1">
             <p>Max:&#8195;${weather.main.temp_max.toFixed(0)}°C</p>
+            <hr>
             <p>Min:&#8195;${weather.main.temp_min.toFixed(0)}°C</p>
+            <hr>
         </div>
         <hr>
         <div class="col-12 col-md-5 mb-1">
             <p>Country:&#8195;${weather.sys.country}</p>
+            <hr>
             <p>Description:&#8195;${weather.weather[0].description}</p>
+            <hr>
         </div>
         <hr>
         <div class="col-12 col-md-4 text-md-right">
            <p>Sunrise:&#8195;${getSunrise(weather)}</p>
+           <hr>
             <p>Sunset:&#8195;${getSunset(weather)}</p>
+            <hr>
         </div>
     </div>
     `
@@ -80,7 +84,7 @@ const renderWether = (weather) => {
 
     return weatherMainBlock.innerHTML = div;
 }
-showDate()
+// showDate()
 
 // ========================= Show Weather
 
@@ -115,8 +119,8 @@ const showWeather = (event) => {
             } else {
                 showCity(weather);
                 renderWether(weather);
-                event.target.closest(".weatherForm").style.transform = "translateY(-100%)"
-                anotherCityBtn.style.transform = "translateY(0)";
+                // event.target.closest(".weatherForm").style.transform = "translateY(-100%)"
+                // anotherCityBtn.style.transform = "translateY(0)";
                 cityInput.value = "";
                 document.querySelector("#error").innerHTML = ""
                 getSunset(weather)
@@ -125,10 +129,10 @@ const showWeather = (event) => {
         })
 }
 
-function anotherCity() {
-    weatherForm.style.transform = "translateY(0)"
-    this.style.transform = "translateY(100%)"
-}
+// function anotherCity() {
+//     weatherForm.style.transform = "translateY(0)"
+//     this.style.transform = "translateY(100%)"
+// }
 
 showWeatherBtn.addEventListener("click", showWeather)
-anotherCityBtn.addEventListener("click", anotherCity)
+// anotherCityBtn.addEventListener("click", anotherCity)

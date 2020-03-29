@@ -158,55 +158,39 @@
     <section id="provide-products" class="provide-products pt-5 pb-5">
         <div class="container">
             <div class="pt-2 provide-products-content row">
-
-                <div class="cards col-lg-7 col-md-6 p-1">
-                    <div class="card p-5 shadow d-flex justify-content-between h-100 a">
-                        <div class="weather-title">
-                            <i class="fas fa-temperature-low"></i>
+                <div class="cards col-12 col-xl-7 p-1">
+                    <div class=" card  px-5 py-3 shadow d-flex justify-content-between h-100 p-md-3 p-xl-4">
+                        <!-- <div class="provide-products-items text-left"> -->
+                            <i class="fas fa-temperature-low pb-4"></i>
+                        <!-- </div> -->
+                        <div class="card_first">
                             <h3>Wheather</h3>
-                            <h2 id="currentCity" class="mb-3">Хмельницкий</h2>
+                            <h3 id="currentCity">Хмельницкий</h3>
                         </div>
                         <div class="main-info">
 
                             <div class="weather-top">
                                 <form id="weatherForm" class="weatherForm">
-                                    <div class="form-group mr-3 mb-3">
+                                    <div class="form-group">
                                         <label for="city" class="sr-only">City</label>
                                         <input type="text" class="form-control" id="cityInput" placeholder="City">
+                                        <span id="error" class='error'></span>
                                     </div>
-                                    <button id="showWeather" type="submit" class="btn btn-primary">Show
-                                        Weather
-                                    </button>
-                                    <span id="error"></span>
+                                    <div id="weatherMainBlock" class="weather-main-block"></div>
+
+                                    <div class="button_group">
+                                        <button id="showWeather" type="submit" class="btn btn-primary col-12 mb-3 col-lg-5 mb-lg-0">Show
+                                            Weather
+                                        </button>
+                                        <!-- <button id="anotherCity" class="btn btn-primary col-12 col-lg-5">Another City</button> -->
+                                    </div>
+
                                 </form>
-                                <!-- <div id="sun" class="text-right">
-                                    <i class="fas fa-sun"></i>
-                                    <h3 class="mb-2 weekday"></h3>
-                                </div> -->
-                                <!-- <div id="localTime">
-                                    
-                                </div> -->
-                            </div>
-
-
-
-                            <h5 class="days text-light mb-3">
-                                <span id="day"></span>
-                            </h5>
-                            <div id="weatherMainBlock" class="weather-main-block"></div>
-                            <div class="anotherCity-block">
-                                <button id="anotherCity" class="btn btn-primary">Another City</button>
                             </div>
                         </div>
-
-
-
-
-
-
                     </div>
                 </div>
-                <div class="cards col-lg-5 col-md-6 p-1">
+                <div class="cards col-xl-5 p-1">
                     <div class="animated mov card p-5 shadow bg-white d-flex justify-content-between  h-100">
                         <div class="provide-products-items text-left">
                             <i class="fas fa-laptop animated mov1 pb-4"></i>
@@ -219,7 +203,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="cards col-lg-5 col-md-6 p-1">
+                <div class="cards col-lg-5 p-1">
                     <div class="animated mov card p-5 shadow d-flex justify-content-between h-100">
                         <div class="provide-products-items text-left">
                             <i class="fas fa-medal animated mov1 pb-4"></i>
@@ -234,7 +218,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="cards col-lg-7 col-md-6 p-1">
+                <div class="cards col-lg-7 p-1">
                     <div class=" animated mov card p-5 shadow d-flex justify-content-between  h-100">
                         <div class="provide-products-items text-left">
                             <i class="fas fa-book-open animated mov1 pb-4"></i>
@@ -247,7 +231,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="cards col-lg-6 col-md-6 p-1">
+                <div class="cards col-lg-6 p-1">
                     <div class=" animated mov card p-5  shadow d-flex justify-content-between h-100">
                         <div class="provide-products-items text-left">
                             <i class="fas fa-clock animated mov1 pb-4"></i>
@@ -260,7 +244,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="cards col-lg-6 col-md-6 p-1">
+                <div class="cards col-lg-6 p-1">
                     <div class=" animated mov card p-5 shadow d-flex justify-content-between h-100">
                         <div class="provide-products-items text-left">
                             <i class="fas fa-medal animated mov1 pb-4"></i>

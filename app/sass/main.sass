@@ -168,6 +168,10 @@ header
 
 .provide-products
     background: #fafafa
+    .card_first
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
     .provide-products-items
         transition: .1s
     i
@@ -176,7 +180,10 @@ header
     .weather-title
         font-family: 'Shrikhand', cursive
         display: flex
-    .weather-top 
+    .weather-top
+        color: black
+        .error
+            color: red
         .fa-sun 
             font-size: 43px
             color: yellow
@@ -221,7 +228,9 @@ header
                 width: 9px
                 height: 2px
                 transition: .5s ease-out
-
+        .card
+            p
+                color: black
 
             
 
@@ -491,39 +500,43 @@ form
             background-color: rgba(0,0,0, .15)
             outline: none
             color: white
-    button[type='submit']
-        position: relative
-        padding: 15px 34px
-        overflow: hidden
-        font-family: 'Montserrat Alternates', sans-serif
-        color: white
-        latter-spacing: 1px
-        text-transform: uppercase
-        font-weight: 600
-        transform: matrix3d(1,0,0,0,0,1,0,0,0,1,0,0,0,0,1)
-        background: #17bed2
-        border: none
-        outline: none
-        cursor: pointer
-        background: linear-gradient(90deg, #a3ffb0, #2bd9e8)
-        &:before, &:after
-            content: ''
-            position: absolute
-            // z-index: -1
-            width: 100%
-            height: 100%
-            left: -110%
-            top: 0
-            opacity: 0.1
-            background: black
-            transform: skewX(25deg)
-            transition: .5s ease
-        &:hover
-            &:before
-                left: -10%
-                transition: .3s ease
-            &:after
-                left: -20%
+    .button_group
+        display: flex
+        flex-wrap: wrap
+        justify-content: flex-end
+        button
+            position: relative
+            padding: 15px 34px
+            overflow: hidden
+            font-family: 'Montserrat Alternates', sans-serif
+            color: white
+            latter-spacing: 1px
+            text-transform: uppercase
+            font-weight: 600
+            transform: matrix3d(1,0,0,0,0,1,0,0,0,1,0,0,0,0,1)
+            background: #17bed2
+            border: none
+            outline: none
+            cursor: pointer
+            background: linear-gradient(90deg, #a3ffb0, #2bd9e8)
+            &:before, &:after
+                content: ''
+                position: absolute
+                // z-index: -1
+                width: 100%
+                height: 100%
+                left: -110%
+                top: 0
+                opacity: 0.1
+                background: black
+                transform: skewX(25deg)
+                transition: .5s ease
+            &:hover
+                &:before
+                    left: -10%
+                    transition: .3s ease
+                &:after
+                    left: -20%
 
 
 .inputbox
