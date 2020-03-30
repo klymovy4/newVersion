@@ -101,13 +101,13 @@ function getSunrise(weather) {
     return sunrise_date;
 }
 
-function showTime1(weather) {
-    const time = new Date(weather.dt * 1000)
-    let timeFormat = time.toLocaleTimeString()
-    console.log('timeFormat', timeFormat);
+// function showTime1(weather) {
+//     const time = new Date(weather.dt * 1000)
+//     let timeFormat = time.toLocaleTimeString()
+//     console.log('timeFormat', timeFormat);
 
-    return timeFormat;
-}
+//     return timeFormat;
+// }
 
 const showWeather = (event) => {
     event.preventDefault()

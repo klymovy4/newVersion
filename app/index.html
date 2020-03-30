@@ -332,9 +332,9 @@
                         </ul>
                     </div>
                 </div>
-
             </div>
         </div>
+
     </section>
 
     <section id="latest-products" class="latest-products py-5">
@@ -541,12 +541,18 @@
         </div>
 
     </section>
-    <div class="container-fluid container-clients ">
+    <div class="container-fluid container-clients mb-2">
         <div class="clients-image">
             <img class='' src="img/970x970/01.jpg" alt="roof">
         </div>
     </div>
-
+    <section class='map_section p-1'>
+        <div class="row h-100">
+            <div class="col-12">
+                <div id="map" class='map'></div>
+            </div>
+        </div>
+    </section>
     <section id='showcase' class="showcase pt-5">
         <div class="container">
             <div class="row">
@@ -803,6 +809,8 @@
 
 
     <link rel="stylesheet" href="css/main.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFg_aHLd3vrUXvLwcVxgmlR1hq3rihqFc&callback=initMap"
+        async defer></script>
     <script src="js/main.js"></script>
     <script src="js/dateWeather.js"></script>
     <script src="js/scripts.min.js"></script>
