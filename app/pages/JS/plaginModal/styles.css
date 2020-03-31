@@ -1,0 +1,65 @@
+.rmodal {}
+
+.rmodal.open .content,
+.rmodal.open .leyout {
+    opacity: 1;
+    z-index: 10;
+}
+.rmodal.hide .content,
+.rmodal.hide .leyout {
+    opacity: 1; 
+    z-index: 10;
+}
+
+
+.rmodal.open .content{
+    transform: translateY(100px);
+}
+.rmodal.open .leyout {
+    background: rgba(0,0,0, .5);
+}
+
+.rmodal.hide .content{
+    transform: translateY(-200px);
+}
+.rmodal.hide .leyout {
+    background: rgba(0,0,0, 0);
+}
+.leyout, .content{
+    opacity: 0;
+    z-index: -1;
+}
+
+.leyout {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0, 0);
+    transition: background .2s ease-in;
+}
+
+.content {
+    margin: auto;
+    width: 300px;
+    /* height: 200px; */
+    background: white;
+    border-radius: 5px;
+    padding: 5px;
+    transform: translateY(-100px);
+    transition: transform .2s ease-in;
+}
+
+.rmodal.hide .modal-leyout,
+.rmodal.hide .modal-content {
+    opacity: 1;
+    z-index: 10;
+}
+
+.img {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+}
+

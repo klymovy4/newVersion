@@ -2,6 +2,7 @@
 @import "libs"
 @import "base"
 @import "vars"
+@import "charts"
 
 .a
     outline: 1px solid red
@@ -54,7 +55,7 @@ body
 	overflow-x: hidden
     font-family: 'Germania One', cursive
 header
-    z-index: 2
+    z-index: 11
     background: transparent
     border-bottom: 1px solid grey
     padding: 10px 0 10px 0
@@ -88,7 +89,7 @@ header
             display: none
     .toggler-icon
         color: white
-    .asd
+    .navbar-collapse
         justify-content: flex-end
     .navbar-item
         cursor: pointer
@@ -150,12 +151,12 @@ header
     height: 100%
     width: 100%
     background-position: center
+    font-family: 'Shrikhand', cursive
     h1
-        font-size: 70px
+        font-size: 50px
         font-weight: 700
         color: #fff
         margin: 0 0 15px 0
-        font-family: Hind, sans-serif
     p
         color: #a6a7aa
     button
@@ -168,12 +169,33 @@ header
 
 .provide-products
     background: #fafafa
+    .card_first
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
     .provide-products-items
         transition: .1s
     i
         font-size: 30px
         color: #999caa
-        // transition: .1s
+    .weather-title
+        font-family: 'Shrikhand', cursive
+        display: flex
+    .weather-top
+        color: black
+        .form-control
+            padding: 0px
+        .error
+            color: red
+        .fa-sun 
+            font-size: 43px
+            color: yellow
+            animation: rotating 5s linear infinite
+        #cityInput
+            background: #fafafa
+        .form-control
+            color: black
+            font-family: 'Shrikhand', cursive
     .cards
         cursor: pointer
         &:hover .provide-products-items
@@ -209,12 +231,9 @@ header
                 width: 9px
                 height: 2px
                 transition: .5s ease-out
-
-
-            
-
-
-
+        .card
+            p
+                color: black
 
 .latest-products
     background: linear-gradient(#fafafa, #fff)
@@ -375,6 +394,13 @@ header
 .container-clients
     display: none
 
+.map_section
+    // height: 440px
+    .container
+        // height: 100%
+    .map
+        width: 100%
+        height: 400px
 
 .showcase
     // height: 100vh
@@ -479,39 +505,44 @@ form
             background-color: rgba(0,0,0, .15)
             outline: none
             color: white
-    button[type='submit']
-        position: relative
-        padding: 15px 34px
-        overflow: hidden
-        font-family: 'Montserrat Alternates', sans-serif
-        color: white
-        latter-spacing: 1px
-        text-transform: uppercase
-        font-weight: 600
-        transform: matrix3d(1,0,0,0,0,1,0,0,0,1,0,0,0,0,1)
-        background: #17bed2
-        border: none
-        outline: none
-        cursor: pointer
-        background: linear-gradient(90deg, #a3ffb0, #2bd9e8)
-        &:before, &:after
-            content: ''
-            position: absolute
-            // z-index: -1
-            width: 100%
-            height: 100%
-            left: -110%
-            top: 0
-            opacity: 0.1
-            background: black
-            transform: skewX(25deg)
-            transition: .5s ease
-        &:hover
-            &:before
-                left: -10%
-                transition: .3s ease
-            &:after
-                left: -20%
+    .button_group
+        display: flex
+        flex-wrap: wrap
+        justify-content: flex-end
+     
+        button
+            position: relative
+            padding: 15px 34px
+            overflow: hidden
+            font-family: 'Montserrat Alternates', sans-serif
+            color: white
+            latter-spacing: 1px
+            text-transform: uppercase
+            font-weight: 600
+            transform: matrix3d(1,0,0,0,0,1,0,0,0,1,0,0,0,0,1)
+            background: #17bed2
+            border: none
+            outline: none
+            cursor: pointer
+            background: linear-gradient(90deg, #a3ffb0, #2bd9e8)
+            &:before, &:after
+                content: ''
+                position: absolute
+                // z-index: -1
+                width: 100%
+                height: 100%
+                left: -110%
+                top: 0
+                opacity: 0.1
+                background: black
+                transform: skewX(25deg)
+                transition: .5s ease
+            &:hover
+                &:before
+                    left: -10%
+                    transition: .3s ease
+                &:after
+                    left: -20%
 
 
 .inputbox
@@ -586,6 +617,9 @@ form
   animation-name: zoom
   animation-duration: 0.6s
 
+
+
+
 @-webkit-keyframes zoom
   from
     -webkit-transform: scale(0)
@@ -601,3 +635,7 @@ form
   to
     transform: scale(1)
 @import "media" // Всегда в конце
+
+@keyframes rotating 
+    0% {transform: rotate(0deg)}
+    100% {transform: rotate(360deg)}

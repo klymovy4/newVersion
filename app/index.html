@@ -33,7 +33,7 @@
                     aria-label="Toggle navigation"><span class="toggler-icon">Menu</span>
                 </button>
 
-                <div class="asd collapse navbar-collapse" id="navbarNavDropdown">
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="navbar-item active-li">
                             <a href="#main-section" class="nav-link">HOME</a>
@@ -46,11 +46,19 @@
                                 aria-haspopup="true" aria-expanded="false">HTML&CSS</a>
                             <div class="dropdown-menu" aria-labelledby="HTML_CSS">
                                 <a class="dropdown-item" target='_blank' href="pages/HTML/test/page1.html">test</a>
+                                <a class="dropdown-item" target='_blank' href="pages/HTML/hoverEffects/index.html">Hover
+                                    Button</a>
                                 <a class="dropdown-item"
                                     href="pages/HTML/akkardion&slide/akkordion&viezd.html">Accardion</a>
                                 <a class="dropdown-item" href="pages/HTML/helloFriends/grid.html">Hello Friends</a>
                                 <a class="dropdown-item" href="pages/HTML/chengeBG/ng.html">Change background</a>
                                 <a class="dropdown-item" href="pages/HTML/tabs/index.html">Tabs</a>
+                                <a class="dropdown-item" href="pages/HTML/videoFullScreen/index.html">Video All
+                                    Screen</a>
+                                <a class="dropdown-item" href="pages/HTML/gloAcaddemy/checkbox/index.html">Glo
+                                    Academy</a>
+                                <a class="dropdown-item" href="pages/HTML/animatePage/index.html">Animate Page</a>
+
                                 <a id='canvas' class="dropdown-item" href="#" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false">Canvas figures
                                 </a>
@@ -70,8 +78,11 @@
                                     <a class="dropdown-item"
                                         href="pages/HTML/canvas/compliments/index.html">Compliments</a>
                                     <a class="dropdown-item" href="pages/HTML/canvas/gallow/index.html">Gallow</a>
-                                </div>
+                                    <a class="dropdown-item" href="pages/HTML/canvas/something/index.html">something</a>
 
+                                </div>
+                                <!-- <a class="dropdown-item" href="pages/HTML/CSS_3D/index.html">CSS 3D</a>
+                                <a class="dropdown-item" href="pages/HTML/CSS 3D II/index.html">CSS 3D II</a> -->
 
                             </div>
                         </li>
@@ -81,10 +92,13 @@
                             <div class="dropdown-menu" aria-labelledby="JS">
                                 <a class="dropdown-item" target='_blank' href="pages/JS/slideshow/slideshow1.html">Slide
                                     Show</a>
-                                <a class="dropdown-item" href="#traveling">Traveling</a>
-                                <a class="dropdown-item" href="#discount">Discount Cards</a>
+                                <a class="dropdown-item" href="pages/JS/chaos/index.html">Chaos</a>
+                                <a class="dropdown-item" href="pages/JS/toDoJs/index.html">To do js</a>
                                 <a class="dropdown-item" href="pages/JS/test/test.html">Тестовое</a>
                                 <a class="dropdown-item" href="pages/JS/permutation/permutation.html">перестановка</a>
+                                <a class="dropdown-item" href="pages/JS/time/time.html">Time</a>
+                                <a class="dropdown-item" href="pages/JS/calculator/debug/index.html">Calculator</a>
+                                <a class="dropdown-item" href="pages/JS/plaginModal/index.html">Plagin Modal</a>
 
                             </div>
                         </li>
@@ -116,7 +130,9 @@
                                 <a class="dropdown-item" href="pages/TRASH/animatione/index.html">Trash 4</a>
                                 <a class="dropdown-item" href="pages/TRASH/firsPages/zanovo.html">Trash 5</a>
                                 <a class="dropdown-item" href="pages/TRASH/firstTry/site.html">Trash 6</a>
-                                <a class="dropdown-item" href="#discount">Trash 7</a>
+                                <a class="dropdown-item" href="pages/TRASH/trash0/index.html">Trash 7</a>
+                                <a class="dropdown-item" href="pages/TRASH/trash1/index.html">Trash 8</a>
+                                <a class="dropdown-item" href="pages/TRASH/trash2/index.html">Trash 9</a>
                             </div>
                         </li>
                         <li class="navbar-item">
@@ -131,8 +147,8 @@
     <section id="main-section" class="main-section d-flex align-items-center">
         <div class="container">
             <div class="main-section-content">
-                <h1>HI-TECH DESIGN</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, voluptatum!</p>
+                <h1>You can burn bud and still be a success.</h1>
+                <p id='time'>https://www.youtube.com/watch?v=hTXAWbeNiBU</p>
                 <a href="pages/page1.html" target='_blank' id='download' class='btn'>Down1load</a>
 
             </div>
@@ -142,22 +158,38 @@
     <section id="provide-products" class="provide-products pt-5 pb-5">
         <div class="container">
             <div class="pt-2 provide-products-content row">
-
-                <div class="cards col-lg-7 col-md-6 p-1">
-                    <div class="card p-5 shadow d-flex justify-content-between h-100">
-                        <div class="provide-products-items text-left">
-                            <i class="fas fa-atom animated mov1 pb-4"></i>
-                            <h3 class="card-title">Art Of Coding</h3>
-                            <p class='card-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
-                                neque.</p>
+                <div class="cards col-12 col-lg-7 p-1">
+                    <div class=" card  px-5 py-3 shadow d-flex justify-content-between h-100 p-md-3 p-xl-4">
+                        <i class="fas fa-temperature-low pb-4"></i>
+                        <div class="card_first">
+                            <h3>Wheather</h3>
+                            <h3 id="currentCity">Хмельницкий</h3>
                         </div>
-                        <div class="item-footer ">
-                            <a href="#" class="link">Подробнее</a>
-                        </div>
+                        <div class="main-info">
 
+                            <div class="weather-top">
+                                <form id="weatherForm" class="weatherForm">
+                                    <div class="form-group">
+                                        <label for="city" class="sr-only">City</label>
+                                        <input type="text" class="form-control" id="cityInput" placeholder="City">
+                                        <span id="error" class='error'></span>
+                                    </div>
+                                    <div id="weatherMainBlock" class="weather-main-block"></div>
+
+                                    <div class="button_group">
+                                        <button id="showWeather" type="submit"
+                                            class="btn btn-primary col-12 mb-3 col-lg-5 mb-lg-0">Show
+                                            Weather
+                                        </button>
+                                        <!-- <button id="anotherCity" class="btn btn-primary col-12 col-lg-5">Another City</button> -->
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="cards col-lg-5 col-md-6 p-1">
+                <div class="cards col-lg-5 p-1">
                     <div class="animated mov card p-5 shadow bg-white d-flex justify-content-between  h-100">
                         <div class="provide-products-items text-left">
                             <i class="fas fa-laptop animated mov1 pb-4"></i>
@@ -170,7 +202,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="cards col-lg-5 col-md-6 p-1">
+                <div class="cards col-lg-5 p-1">
                     <div class="animated mov card p-5 shadow d-flex justify-content-between h-100">
                         <div class="provide-products-items text-left">
                             <i class="fas fa-medal animated mov1 pb-4"></i>
@@ -185,7 +217,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="cards col-lg-7 col-md-6 p-1">
+                <div class="cards col-lg-7 p-1">
                     <div class=" animated mov card p-5 shadow d-flex justify-content-between  h-100">
                         <div class="provide-products-items text-left">
                             <i class="fas fa-book-open animated mov1 pb-4"></i>
@@ -198,7 +230,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="cards col-lg-6 col-md-6 p-1">
+                <div class="cards col-lg-6 p-1">
                     <div class=" animated mov card p-5  shadow d-flex justify-content-between h-100">
                         <div class="provide-products-items text-left">
                             <i class="fas fa-clock animated mov1 pb-4"></i>
@@ -211,7 +243,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="cards col-lg-6 col-md-6 p-1">
+                <div class="cards col-lg-6 p-1">
                     <div class=" animated mov card p-5 shadow d-flex justify-content-between h-100">
                         <div class="provide-products-items text-left">
                             <i class="fas fa-medal animated mov1 pb-4"></i>
@@ -224,10 +256,85 @@
                         </div>
                     </div>
                 </div>
+                <div class="cards col-12  p-1">
+                    <div class="card p-3 shadow d-flex justify-content-between h-100">
+                        <!-- <i class="far fa-chart-bar"></i> -->
+                        <h2>Circle Charts</h2>
+                        <hr>
+                        <ul class='row percentg-circles justify-content-around pl-0'>
+                            <li class='col-sm-6 col-md-3 text-center mb-2'>
+                                <div class='chart circle-one'>
+                                    <div class="figure">
+                                        <div class="pie">
+                                            <div class="slice-bg"></div>
+                                            <div class='slice'>
+                                                <span
+                                                    style='transform: rotate(-50.4deg) translate3d(0px, 0px, 0px); background: linear-gradient(rgb(251, 50, 50), rgb(190, 24, 24));'>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="data-table">
+                                        <span class="percent">36%</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class='col-sm-6 col-md-3 text-center mb-2'>
+                                <div class="chart circle-one">
+                                    <div class="figure">
+                                        <div class="pie">
+                                            <div class="slice-bg"></div>
+                                            <div class="slice">
+                                                <span
+                                                    style="transform: rotate(-162deg) translate3d(0px, 0px, 0px); background: linear-gradient(rgb(212, 174, 66), rgb(187, 150, 44));"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="data-table">
+                                        <span class="percent">5%</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class='col-sm-6 col-md-3 text-center mb-2'>
+                                <div class="chart circle-one">
+                                    <div class="figure">
+                                        <div class="pie">
+                                            <div class="slice-bg"></div>
+                                            <div class="slice">
+                                                <span
+                                                    style="transform: rotate(-86.4deg) translate3d(0px, 0px, 0px); background: linear-gradient(rgb(38, 139, 186), rgb(29, 76, 129));"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="data-table">
+                                        <span class="percent">26%</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-sm-6 col-md-3 text-center mb-2">
+                                <div class="chart circle-one">
+                                    <div class="figure">
+                                        <div class="pie">
+                                            <div class="slice-bg"></div>
+                                            <div class="slice">
+                                                <span
+                                                    style="transform: rotate(-50.4deg) translate3d(0px, 0px, 0px); background: linear-gradient(rgb(74, 123, 42), rgb(54, 98, 26));"></span>
+                                            </div>
 
+                                        </div>
+                                    </div>
+                                    <div class="data-table">
+                                        <span class="percent">36%</span>
+                                    </div>
+                                </div>
+                            </li>
 
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
+
     </section>
 
     <section id="latest-products" class="latest-products py-5">
@@ -434,7 +541,7 @@
         </div>
 
     </section>
-    <div class="container-fluid container-clients ">
+    <div class="container-fluid container-clients mb-2">
         <div class="clients-image">
             <img class='' src="img/970x970/01.jpg" alt="roof">
         </div>
@@ -443,7 +550,7 @@
     <section id='showcase' class="showcase pt-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-12">
                     <h2>Showcase</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem fuga rerum recusandae
                         voluptatem. Deleniti
@@ -610,6 +717,45 @@
         </div>
     </section>
 
+
+
+
+
+
+
+
+
+
+
+    <section class='map_section'>
+        <div class="container">
+            <div class="row">
+                <div class="cards col-12 px-0">
+                    <div class="card p-2 shadow">
+                        <h2 class='text-center'>Map</h2>
+                        <div id="map" class='map'></div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- <div class="row justify-content-center h-100">
+                <div class="col-12 col-md-8">
+                    <div id="map" class='map'></div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
     <section id="footer" class="footer  pt-lg-5 pt-sm-3">
         <div class="container">
             <div class="row pt-2">
@@ -696,7 +842,10 @@
 
 
     <link rel="stylesheet" href="css/main.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFg_aHLd3vrUXvLwcVxgmlR1hq3rihqFc&callback=initMap"
+        async defer></script>
     <script src="js/main.js"></script>
+    <script src="js/dateWeather.js"></script>
     <script src="js/scripts.min.js"></script>
 </body>
 
