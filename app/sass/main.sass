@@ -3,6 +3,7 @@
 @import "base"
 @import "vars"
 @import "charts"
+@import "todo"
 
 .a
     outline: 1px solid red
@@ -168,34 +169,38 @@ header
             transition: .5s
 
 .provide-products
+    font-family: 'Shrikhand', cursive
     background: #fafafa
-    .card_first
-        display: flex
+    .weather_title
         flex-wrap: wrap
+        border-bottom: 2px solid #000
+        font-family: 'Shrikhand', cursive
+        display: flex
         justify-content: space-between
+        h3
+            margin-bottom: 0
+            line-height: 1.25
+        h3
+            margin-bottom: 0
     .provide-products-items
         transition: .1s
     i
         font-size: 30px
         color: #999caa
-    .weather-title
-        font-family: 'Shrikhand', cursive
-        display: flex
-    .weather-top
-        color: black
-        .form-control
-            padding: 0px
         .error
             color: red
         .fa-sun 
             font-size: 43px
             color: yellow
             animation: rotating 5s linear infinite
-        #cityInput
-            background: #fafafa
         .form-control
-            color: black
-            font-family: 'Shrikhand', cursive
+            background: #fff
+            border-bottom: 1px solid #ced4da
+            // color: black
+            // font-family: 'Shrikhand', cursive
+            // border-bottom: 1px solid black
+    .todoContent
+        height: 400px
     .cards
         cursor: pointer
         &:hover .provide-products-items
@@ -489,8 +494,6 @@ header
         color: #ccc
 
 form
-    p
-        color: white
     input
         color: white
     .form-control

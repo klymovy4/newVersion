@@ -22,25 +22,7 @@ function stopRotate() {
 }
 var download = document.getElementById('download');
 
-//  Time ===================================================
 
-function getTime() {
-    const date = new Date()
-    return date.getHours() + ':' + addNull(date.getMinutes()) + ':' + addNull(date.getSeconds())
-}
-
-let showTime = setInterval(() => {
-    document.querySelector('#time').innerHTML = getTime()
-}, 1000)
-
-
-function addNull(n) {
-    if (n < 10) {
-        return '0' + n
-    } else {
-        return n
-    }
-}
 // Map ======================================================
 // https://www.youtube.com/watch?v=Zxf1mnP5zcw
 // const API_MAP = "AIzaSyBFg_aHLd3vrUXvLwcVxgmlR1hq3rihqFc"

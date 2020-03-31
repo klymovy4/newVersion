@@ -30,6 +30,7 @@ gulp.task('js', function () {
 		// 'app/libs/bootstrap.min.js.map',
 		'app/libs/jquery.mask.min.js',
 		'app/libs/bootstrap.min.js',
+		// 'app/js/dateWeather.js',
 		'app/js/common.js', // Всегда в конце
 	])
 		.pipe(concat('scripts.min.js'))
