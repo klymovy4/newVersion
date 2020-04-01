@@ -210,7 +210,29 @@ header
             .error
                 position: absolute
                 color: red
-
+    .jesus_slider
+        position: relative
+        height: 400px
+        cursor: pointer
+        transition: 0.4s
+        overflow: hidden
+        transform: translateX(-90px)
+        &:hover
+            // transform: translateX(-90px)
+            transition: 0.4s
+            border-radius: 30px
+            filter: grayscale(.75)
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            bottom: 0
+            right: 0
+            background-image: url('../img/air-bg.jpeg')
+            background-size: cover
+            background-position: center
+            opacity: 1
 .latest-products
     background: linear-gradient(#fafafa, #fff)
     h2
@@ -267,7 +289,6 @@ header
                 color: #7c7e86
     .hide-text
         display: none
-
 
 .customer-reviews
     background: linear-gradient(#fff, #fafafa)
