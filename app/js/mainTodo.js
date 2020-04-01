@@ -1,10 +1,3 @@
-// Date
-const time = document.getElementById('time');
-const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-const today = new Date();
-time.innerHTML = today.toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' });
-// Date end
-
 const refresh = document.getElementById('refresh');
 const trash = document.getElementsByClassName('trash');
 const addToDo = document.getElementById('addToDo');

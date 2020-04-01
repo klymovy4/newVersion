@@ -1,31 +1,15 @@
 // Date ===============================================
-let date = new Date();
-let day = date.getDate();
-let month = date.getMonth();
-let year = date.getFullYear();
-const weekday = { weekday: 'long' };
-const weekdayShort = { weekday: 'short' };
-const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 const innerDay = document.querySelector("#day")
-// const localTime = document.querySelector("#localTime")
 const cityInput = document.querySelector("#cityInput")
 const showWeatherBtn = document.querySelector("#showWeather")
-// const anotherCityBtn = document.querySelector("#anotherCity")
 const weatherMainBlock = document.querySelector("#weatherMainBlock")
 const weatherForm = document.querySelector("#weatherForm")
 const currentCity = document.querySelector("#currentCity")
+const weatherUl = document.querySelector("#weather-ul")
 let cityName = "Хмельницкий";
 
 const showCity = (city) => {
     currentCity.innerHTML = city.name;
-    // console.log("showCity", city.name);
-}
-function innerZiro(n) {
-    if (n < 10) {
-        return "0" + n
-    } else {
-        return n
-    }
 }
 // function showDate() {
 //     return innerDay.innerHTML = innerZiro(day) + "/" + innerZiro(month + 1) + "/" + year;
@@ -50,11 +34,8 @@ getApiWeather(cityName)
     })
 // .then(weather => showTime1(weather))
 
-
-const weatherUl = document.querySelector("#weather-ul");
-
 const renderWether = (weather) => {
-    // console.log(weather);
+    console.log(weather.dt * 1000);
     const div = `
     <div class="row mb-2">
 
@@ -64,19 +45,17 @@ const renderWether = (weather) => {
             <p>Min:&#8195;${weather.main.temp_min.toFixed(0)}°C</p>
             <hr>
         </div>
-        <hr>
         <div class="col-12 col-md-5 mb-1">
             <p>Country:&#8195;${weather.sys.country}</p>
             <hr>
             <p>Description:&#8195;${weather.weather[0].description}</p>
             <hr>
         </div>
-        <hr>
         <div class="col-12 col-md-4 text-md-right">
-           <p>Sunrise:&#8195;${getSunrise(weather)}</p>
-           <hr>
+            <p>Sunrise:&#8195;${getSunrise(weather)}</p>
+                <hr>
             <p>Sunset:&#8195;${getSunset(weather)}</p>
-            <hr>
+                <hr>
         </div>
     </div>
     `
@@ -84,7 +63,6 @@ const renderWether = (weather) => {
 
     return weatherMainBlock.innerHTML = div;
 }
-// showDate()
 
 // ========================= Show Weather
 
@@ -100,14 +78,6 @@ function getSunrise(weather) {
     // console.log("sunrise", sunrise_date);
     return sunrise_date;
 }
-
-// function showTime1(weather) {
-//     const time = new Date(weather.dt * 1000)
-//     let timeFormat = time.toLocaleTimeString()
-//     console.log('timeFormat', timeFormat);
-
-//     return timeFormat;
-// }
 
 const showWeather = (event) => {
     event.preventDefault()
@@ -129,10 +99,4 @@ const showWeather = (event) => {
         })
 }
 
-// function anotherCity() {
-//     weatherForm.style.transform = "translateY(0)"
-//     this.style.transform = "translateY(100%)"
-// }
-
 showWeatherBtn.addEventListener("click", showWeather)
-// anotherCityBtn.addEventListener("click", anotherCity)

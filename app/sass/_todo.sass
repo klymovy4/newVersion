@@ -1,0 +1,83 @@
+.toDo > div
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        background-image: url('../img/todo-main-bg.jpeg')
+        background-repeat: no-repeat
+        background-size: cover
+        opacity: 0.3
+    p
+        margin: 0
+        padding: 0
+    .header_todo
+        position: relative
+        // height: 70px
+        border-bottom: 2px solid black
+        h3
+            display: inline-block
+        .time_refresh 
+            position: absolute
+            bottom: 0
+            width: 100%
+            .time
+                font-weight: bold
+        .fa-sync-alt
+            transition: 0.5s
+            cursor: pointer
+            font-size: 16px
+            line-height: 1.65
+            &:hover
+                color: red
+                transform: scale(1.2)
+                transition: 0.5s
+    main
+        position: relative
+        height: inherit
+        overflow: scroll
+        .content_todo
+            .fa-circle, .fa-trash, .fa-check-circle
+                cursor: pointer
+                color: #00b5e2
+                font-size: 16px
+                cursor: pointer
+                transition: 0.2s
+        .content_ul
+            padding: 10px
+            position: relative
+            .content_li
+                height: 41px
+                position: relative
+                display: flex
+                margin-bottom: 5px
+                border-bottom: 1px solid black
+                border-radius: 8px
+                padding: 5px
+                align-items: center
+                transition: all 5s
+                box-shadow: -3px 6px 7px 0px #9072b573
+                p
+                    margin-left: 10px
+                .fa-trash
+                    position: absolute
+                    right: 17px
+                    &:hover
+                       color: red
+                       transition: 0.2s
+                .line_throught
+                    text-decoration: line-through
+                    color: grey
+                .checked
+                    display: none
+                .text_p:disabled
+                    border: none
+                    background: transparent
+                    padding-left: 10px
+                .text_p:enabled
+                    border: none
+                    background: #fff
+                    padding-left: 10px
+                
