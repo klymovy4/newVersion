@@ -1,4 +1,9 @@
-.toDo > div
+.todo
+    height: 400px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    position: relative
     &::before
         content: ''
         position: absolute
@@ -10,21 +15,21 @@
         background-repeat: no-repeat
         background-size: cover
         opacity: 0.3
-    p
-        margin: 0
-        padding: 0
-    .header_todo
+        // z-index: 0
+    .todo_title
         position: relative
-        // height: 70px
-        border-bottom: 2px solid black
+        border-bottom: 2px solid #000
+        align-items: flex-end
         h3
             display: inline-block
+        i
+            line-height: 1.65
         .time_refresh 
             position: absolute
             bottom: 0
             width: 100%
-            .time
-                font-weight: bold
+        .time
+            font-weight: bold
         .fa-sync-alt
             transition: 0.5s
             cursor: pointer
@@ -34,17 +39,16 @@
                 color: red
                 transform: scale(1.2)
                 transition: 0.5s
-    main
+    .content_todo
         position: relative
         height: inherit
         overflow: scroll
-        .content_todo
-            .fa-circle, .fa-trash, .fa-check-circle
-                cursor: pointer
-                color: #00b5e2
-                font-size: 16px
-                cursor: pointer
-                transition: 0.2s
+        .fa-circle, .fa-trash, .fa-check-circle
+            cursor: pointer
+            color: #00b5e2
+            font-size: 16px
+            cursor: pointer
+            transition: 0.2s
         .content_ul
             padding: 10px
             position: relative
@@ -65,8 +69,8 @@
                     position: absolute
                     right: 17px
                     &:hover
-                       color: red
-                       transition: 0.2s
+                        color: red
+                        // transition: 0.2s
                 .line_throught
                     text-decoration: line-through
                     color: grey
@@ -80,4 +84,3 @@
                     border: none
                     background: #fff
                     padding-left: 10px
-                

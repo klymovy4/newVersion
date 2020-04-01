@@ -37,8 +37,7 @@ getApiWeather(cityName)
 const renderWether = (weather) => {
     console.log(weather.dt * 1000);
     const div = `
-    <div class="row mb-2">
-
+    <div class="row mt-4 mb-3">
         <div class="col-12 col-md-3 mb-1">
             <p>Max:&#8195;${weather.main.temp_max.toFixed(0)}°C</p>
             <hr>
