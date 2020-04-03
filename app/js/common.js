@@ -179,7 +179,7 @@ $(function () {
 
 	});
 	$('.modall').click(function () {
-		$('.modal-content').hide();
+		// $('.modal-content').hide();
 		$('.modall').hide();
 	});
 
