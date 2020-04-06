@@ -1,0 +1,120 @@
+body{
+            /* width: auto; */
+            /* outline: 1px solid orange; */
+            font-family: "Lato";
+            /* Verdana, Geneva, Tahoma, sans-serif; */
+            margin: 0;
+            padding: 0;
+        }
+        .klmv4{
+            margin: 0;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+        .leftside{
+            position: fixed;
+            /* outline: 1px solid orange; */
+            width: 250px;
+            height: auto;
+            top:0;
+            right: -200px;
+            
+        }
+     
+        .leftside a:hover{
+            padding: 15px 15px 15px 1px;
+            text-align: left;
+            /* left:20px; */
+            transition: 0.4s;
+            transform: translateX(-60px);
+            box-shadow: 5px 5px 5px black;
+        }
+       
+        .leftside a{
+            /* text-transform: uppercase; */
+            text-align: center;
+            border-radius: 8px 0 0 8px;
+            transition: 0.3s;
+            box-shadow: 25px 5px 5px black;
+            min-width: 195px;
+            /* position: absolute; */
+            color:black;
+            text-decoration: none;
+            margin: 25px 0;
+            /* outline: 1px solid orange; */
+            padding: 15px;
+            font-size: 24px;
+            display: block;
+            border: 2px solid black;
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b8e1fc+0,a9d2f3+10,90bae4+25,90bcea+37,90bff0+50,6ba8e5+51,a2daf5+83,bdf3fd+100;Blue+Gloss+%231 */
+background: #b8e1fc; /* Old browsers */
+background: -moz-linear-gradient(top, #b8e1fc 0%, #a9d2f3 10%, #90bae4 25%, #90bcea 37%, #90bff0 50%, #6ba8e5 51%, #a2daf5 83%, #bdf3fd 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #b8e1fc 0%,#a9d2f3 10%,#90bae4 25%,#90bcea 37%,#90bff0 50%,#6ba8e5 51%,#a2daf5 83%,#bdf3fd 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #b8e1fc 0%,#a9d2f3 10%,#90bae4 25%,#90bcea 37%,#90bff0 50%,#6ba8e5 51%,#a2daf5 83%,#bdf3fd 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8e1fc', endColorstr='#bdf3fd',GradientType=0 ); /* IE6-9 */
+        }
+
+.leftside .vt{
+    top: 80px;
+}
+.leftside .sr{
+    top: 160px;
+}
+.mystyle {
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    background-color: coral;
+    color: white;
+    margin-bottom: 10px;
+}
+.zorro{
+    background: red;
+}
+.toto{
+    font-size: 24px;
+}
+.calc{
+    /* outline: 1px solid orange; */
+    /* position: relative; */
+    margin: 10px;
+    outline: 1px solid white;
+    box-shadow: 7px 5px 5px black;
+    border: 2px solid black;
+    width: 300px;
+    top:200px;
+}
+.calcForm{
+    margin: 20px;
+    /* outline: 1px solid orange; */
+    justify-content: center;
+    position: relative;
+}
+.calcForm input:hover{
+    border: 2px solid rgb(93, 184, 207);
+    box-shadow: 2px 2px 2px gray;
+}
+.calcForm input{
+    box-shadow: 2px 2px 2px gray;
+    /* outline: 1px solid orange; */
+    position:absolute;
+    margin: 0 0 0 50px;
+    justify-content: center;
+    /* display:none; */
+    text-align: center; 
+}
+.calcForm p{
+    margin-top: 30px;
+     text-align: center; 
+} 
+.up{
+    /* display: flex; */
+    max-height: 200px;
+}
+.knopka{
+    cursor: pointer;
+}
+.block{
+    outline: 1px solid orange;
+}

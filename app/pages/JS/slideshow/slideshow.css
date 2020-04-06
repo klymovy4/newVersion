@@ -1,0 +1,160 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: rgb(225, 255, 227);
+}
+
+
+img{
+    /* position: absolute; */
+    width: 600px;
+    height: 450px;
+
+}
+.slideshow-container {
+    position: relative; 
+    justify-content: center;
+                                                            /* position: absolute; */
+     width: 620px;
+    height: auto;
+    /* right: 252px; */
+    top: 20px;
+    margin: auto;
+    border: 10px solid white;
+    box-shadow: 0px 0px 5px 2px #ccc; 
+}
+.slides1 {
+    display: none;
+}
+
+.number {
+    /* outline: 1px solid orange; */
+    /* z-index: 1px; */
+    position: absolute;
+    padding: 8px 12px;
+    color: white;
+    /* font-size: 12px; */
+    
+}
+.caption {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    position: absolute;
+    padding: 10px 16px;
+    bottom: 8px;
+    color: white;
+    font-weight: bold;
+}
+.prev, .next {
+    position: absolute;
+    top: 45%;
+    color: white;
+    cursor: pointer;
+    /* outline: 1px solid orange; */
+    padding: 25px 11px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 5px 5px 0;
+ 
+}
+.next   {
+    border-radius: 5px 0 0 5px;
+    right: 0;
+}
+.prev:hover, .next:hover {
+    background: rgba(0,0,0,0.5);
+}
+.maindot{
+    margin: 1px 237px;
+    position: relative;
+    /* outline: 1px solid orange; */
+    padding: 2px;
+    text-align: center;
+}
+.dots{
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+    background: gray;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.fad {
+    animation-name: fade;
+    animation-duration: 0.2s;
+} 
+ @keyframes fade{
+  from{opacity: 0.4;}
+    to{opacity: 1;}
+} 
+.active, .dots:hover{
+    background: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* img{
+    /* width: 906px;
+    height: 613 px; 
+    width: 600px;
+    height: 450px;
+
+}
+.slideshow-container {
+    justify-content: center;
+                                                            /* position: absolute; */
+   /* width: 620px;
+    height: auto;
+    right: 252px;
+    top: 60px;
+    margin: 20px auto;
+    border: 10px solid white;
+    box-shadow: 0px 0px 5px 2px #ccc; 
+}
+.leftright {
+    padding: 20px;
+    border: none;
+    background: #37f;
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 45%;
+}
+.a {
+    border-radius: 10px 0px 0px 10px;
+    margin-left: 845px;
+}
+.b {
+    border-radius: 0px 10px 10px 0px;
+} */

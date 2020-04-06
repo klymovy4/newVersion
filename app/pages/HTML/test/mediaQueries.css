@@ -1,0 +1,110 @@
+/* media devices desctop*/
+@media only screen and (max-width: 992px){
+    .wrapper{
+        width: 750;
+    }
+    .header{
+        background: purple;
+    }
+    .top-menu{
+        background: paleturquoise;
+    }
+    .slideLeft{
+        background: olive;
+    }
+    .content{
+        background: navajowhite;
+    }
+    .footer{
+        background: mediumvioletred;
+        height: 45px;
+    }
+}
+/* small Devices Tablet*/
+
+@media screen and (max-width: 768px){
+    .wrapper{
+        width: 450px;
+    }
+    .menu{
+        padding-left: 0;
+         display: none;
+     }
+    
+     .menu li {
+        
+         float: none;
+         border-top: 1px solid black;
+     }
+     .menu li a{
+         color: black;
+     }
+     .menuToggle{
+         padding: 10px 15px;
+         display: inline-block;
+         cursor: pointer;
+         color: black;
+     }
+    .header{
+        color: black;
+        background: white;
+        height: 100px;
+        border-radius: 3px;
+    }
+    .top-menu{
+        background: paleturquoise;
+        margin-top: 4px;
+        border-radius: 3px;
+        /* height: 25px; */
+    }
+  
+    .sideLeft{
+        margin-top: 4px;
+        background: olive;
+        width: 100%;
+        float: none;
+    }
+    .bar {
+        background: #f0f1ef;
+        border-radius: 2px;
+        width: 98%;
+        height: auto;
+        color: black;
+    }
+    .content{
+        background: #dbdddb;
+        width: 100%;
+        margin-top: 4px;
+        height: 250px;
+        float: none;
+    }
+    .footer{
+        background: rgb(230, 201, 219);
+        height: 35px;
+        margin-top: 4px;
+    }
+}
+@media only screen and (max-width: 480px){
+    .wrapper{
+        width: 320px;
+    }
+    .header{
+        background: purple;
+    }
+    .top-menu{
+        background: paleturquoise;
+    }
+    .slideLeft{
+        background: olive;
+        height: auto;
+    }
+    .content{
+        background: navajowhite;
+        height: auto;
+        color: black;
+    }
+    .footer{
+        background: mediumvioletred;
+        height: 45px;
+    }
+}
