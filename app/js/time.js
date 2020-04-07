@@ -8,6 +8,14 @@ const options = { weekday: 'long', year: 'numeric', month: 'long' };
 
 //  Time Main page===================================================
 
+
+function addNull(n) {
+    if (n < 10) {
+        return '0' + n
+    } else {
+        return n
+    }
+}
 function getTime() {
     const date = new Date()
     return date.getHours() + ':' + addNull(date.getMinutes()) + ':' + addNull(date.getSeconds())
@@ -17,13 +25,12 @@ function getTime() {
 const declOfNum = (n, t) => t[(n % 100 > 4 && n % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(n % 10 < 5) ? n % 10 : 5]]
 
 const showResult = d => {
-    const month = ["день", "дня", "дней"]
-    return d + ' ' + declOfNum(d, month)
+    const day = ["день", "дня", "дней"]
+    return d + ' ' + declOfNum(d, day)
 }
 const finishCor = () => ((endCorontine - date) / 1000 / 60 / 60 / 24).toFixed(0)
-const listenMusic = () => {
-    return `<a target='_blank' style='color: #a6a7aa; text-decoration: underline' href='https://www.youtube.com/watch?v=szDnqw-Tz5I'> Послушай музыку</a>`
-}
+const listenMusic = () => `<a target='_blank' style='color: #a6a7aa; text-decoration: underline' href='http://online-red.com/radio/record-chillout.html'> Послушай музыку</a>`
+
 let showTime = setInterval(() => {
     // document.querySelector('#timeMain').innerHTML = getTime()
     document.querySelector('#timeMain').innerHTML = 'Сегодня ' + day + ' ' +
@@ -31,14 +38,6 @@ let showTime = setInterval(() => {
         '. Самоизолируйся и просто жди. До конца карантина осталось ' + showResult(finishCor()) + '. ' + listenMusic();
 }, 1000)
 
-
-function addNull(n) {
-    if (n < 10) {
-        return '0' + n
-    } else {
-        return n
-    }
-}
 
 //  Time todo page===================================================
 
