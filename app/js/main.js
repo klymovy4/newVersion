@@ -110,9 +110,9 @@ function initMap() {
 function showTarget(event){
     let target = event.target
     if(target.classList.contains('myImg')){
-        console.log('true', true)
+        // console.log('true', true)
     }else{
-        console.log(false)
+        // console.log(false)
         
     }
 

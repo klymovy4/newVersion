@@ -37,7 +37,7 @@ $(function () {
 
 	var mobileScrolDown = true;
 	$('.dropdown').click(function (event) {
-		console.log(event);
+		// console.log(event);
 		mobileScrolDown = false;
 		//event.stopPropagation();
 	});

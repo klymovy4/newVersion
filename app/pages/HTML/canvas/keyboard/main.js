@@ -113,6 +113,6 @@ setInterval(function () {
 var keyNames;
 
 $('body').keydown(function (event) {
-    console.log(event.keyCode);
+    // console.log(event.keyCode);
 
 });

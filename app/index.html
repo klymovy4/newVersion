@@ -170,7 +170,7 @@
 
                         <form id="weatherForm" class="weatherForm">
                             <div class="input-group">
-                                <label for="city" class="sr-only">City</label>
+                                <label for="cityInput" class="sr-only">City</label>
                                 <input type="text" class="form-control" id="cityInput" placeholder="City">
                             </div>
                             <span id="error" class='error'></span>
@@ -221,7 +221,7 @@
                     </div>
                 </div>
                 <!-- slider block -->
-                <div class="col-12 col-lg-7 p-1">
+                <div class="col-12 col-lg-4 p-1">
                     <div class="jesus_slider shadow p-3">
                         <ul class='d-flex flex-column p-3 h-75'>
                             <li class='ml-5 '><a href="#"><i class="fas fa-cog "></i></a></li>
@@ -232,15 +232,45 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-12 col-lg-5 b">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio tempora, accusamus facilis cumque
-                        iste quos ut nostrum illum consectetur deleniti.</p>
+                <div class="col-12 col-lg-8 p-1">
+                    <div class="covid19 p-3 h-100 d-flex flex-column justify-content-between">
+                        <div class="covid_title mb-3">
+                            <h3>Covid 19</h3>
+                            <span id='time_covid'></span>
+                            <h3 id="covidCountry">zuraga</h3>
+                        </div>
+                        <form id="covidForm" class="covidrForm">
+                            <div class="input-group">
+                                <label for="covidInput" class="sr-only">City</label>
+                                <input type="text" class="form-control" id="covidInput" placeholder="Enter Country">
+                            </div>
+                            <span id="error" class='error'></span>
+                            <div id="covidMainBlock" class="covid-main-block">
+                                <!-- <div class="row">
+                                    <div class='col-6'>
+                                        <p>New Confirmed: 8 </p>
+                                        <p>New Deaths: 1</p>
+                                        <p>New Recovered: 0</p>
+                                    </div>
+                                    <div class='col-6'>
+                                        <p>Total Confirmed: 4839</p>
+                                        <p>Total Deaths: 459</p>
+                                        <p>Total Recovered: 426</p>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="button_group">
+                                <button id="showCovidResults" type="submit"
+                                    class="btn btn-primary col-12 mb-3 col-lg-5 mb-lg-0">Show Results
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
 
     </section>
-
 
 
 
@@ -747,8 +777,8 @@
 
 
     <div id='myModal' class="modall">
-            <img class="modal-content" src="">
-       
+        <img class="modal-content" src="">
+
         <div id="caption"></div>
     </div>
 
@@ -764,6 +794,7 @@
     <script src="js/time.js"></script>
     <script src="js/dateWeather.js"></script>
     <script src="js/mainTodo.js"></script>
+    <script src="js/covid19.js"></script>
     <script src="js/scripts.min.js"></script>
 </body>
 

@@ -42,4 +42,6 @@ let showTime = setInterval(() => {
 //  Time todo page===================================================
 
 const timeTodo = document.getElementById('time_todo')
+const time_covid = document.getElementById('time_covid')
 timeTodo.innerHTML = date.toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' });
+time_covid.innerHTML = date.toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' });

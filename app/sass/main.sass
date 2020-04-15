@@ -4,6 +4,7 @@
 @import "vars"
 @import "charts"
 @import "todo"
+@import "covid"
 
 .a
     outline: 1px solid red
@@ -16,44 +17,44 @@
 * li
     list-style: none
 .loader 
-	background: none repeat scroll 0 0 #ffffff
-	bottom: 0
-	height: 100%
-	left: 0
-	position: fixed
-	right: 0
-	top: 0
-	width: 100%
-	z-index: 9999
+    background: none repeat scroll 0 0 #ffffff
+    bottom: 0
+    height: 100%
+    left: 0
+    position: fixed
+    right: 0
+    top: 0
+    width: 100%
+    z-index: 9999
 
 .loader_inner 
-	background-image: url("../img/preloader.gif")
-	background-size: cover
-	background-repeat: no-repeat
-	background-position: center center
-	background-color: #fff
-	height: 60px
-	width: 60px
-	margin-top: -30px
-	margin-left: -30px
-	left: 50%
-	top: 50%
-	position: absolute
+    background-image: url("../img/preloader.gif")
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+    background-color: #fff
+    height: 60px
+    width: 60px
+    margin-top: -30px
+    margin-left: -30px
+    left: 50%
+    top: 50%
+    position: absolute
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid 
-	border: 1px solid red
+    border: 1px solid red
     outline: none
     background: transparent
 
 body input:required:valid,
 body textarea:required:valid 
-	outline: 1px solid green
+    outline: 1px solid green
     background: transparent
 
 body
 	// opacity: 0
-	overflow-x: hidden
+    overflow-x: hidden
     font-family: 'Germania One', cursive
 header
     z-index: 11
@@ -210,6 +211,7 @@ header
             .error
                 position: absolute
                 color: red
+                top: 35px
     .jesus_slider
         position: relative
         height: 400px
@@ -311,27 +313,27 @@ header
             color: #a6a7aa
             line-height: 1.4
     .read-more-less 
-            position: relative
-            display: block
-            font-size: 13px
-            font-weight: 600
-            border: none
-            text-transform: uppercase
-            font-family: Hind, sans-serif
-            background: transparent
-            color: #999caa
-            padding: 10px 0 10px 0
-            margin-top: 10px
-            cursor: pointer
-            outline: none
-            &:after
-                content: ''
-                position: absolute
-                top: 14px
-                right: -16px
-                background: #17bed2
-                width: 9px
-                height: 2px
+        position: relative
+        display: block
+        font-size: 13px
+        font-weight: 600
+        border: none
+        text-transform: uppercase
+        font-family: Hind, sans-serif
+        background: transparent
+        color: #999caa
+        padding: 10px 0 10px 0
+        margin-top: 10px
+        cursor: pointer
+        outline: none
+        &:after
+            content: ''
+            position: absolute
+            top: 14px
+            right: -16px
+            background: #17bed2
+            width: 9px
+            height: 2px
             &:hover
                 color: #7c7e86
     .hide-text
@@ -538,7 +540,7 @@ form
         line-height: 1.4
         color: white
         placeholder
-            color: white
+        color: white
         &:focus
             background-color: rgba(0,0,0, .15)
             outline: none
@@ -648,16 +650,6 @@ form
     .myImg
         transition: transform 0.2s
 
-/* Add Animation
-// .modal-content, #caption
-//   -webkit-animation-name: zoom
-//   -webkit-animation-duration: 0.6s
-//   animation-name: zoom
-//   animation-duration: 0.6s
-
-
-
-
 @-webkit-keyframes zoom
   from
     -webkit-transform: scale(0)
@@ -674,6 +666,4 @@ form
 @keyframes rotating 
     0% {transform: rotate(0deg)}
     100% {transform: rotate(360deg)}
-
-
-@import "media" // Всегда в конце
+@import "media"

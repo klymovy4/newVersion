@@ -28,6 +28,6 @@ btn.addEventListener('click', showInsult);
 function showInsult() {
     var txt = document.getElementById('txt');
     txt.innerHTML = randomInsult();
-    console.log(randomInsult);
+    // console.log(randomInsult);
 
 };
