@@ -2,7 +2,7 @@ let date = new Date();
 let day = date.getDate();
 let month = date.getMonth();
 let year = date.getFullYear();
-let endCorontine = new Date(2020, 3, 24)
+let endCorontine = new Date(2020, 4, 11)
 const weekdayShort = { weekday: 'long', month: 'short' };
 const options = { weekday: 'long', year: 'numeric', month: 'long' };
 

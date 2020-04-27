@@ -21,21 +21,21 @@ const showCity = (city) => {
 async function getApiWeather(cityName) {
     let data = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=4bfc9c92a94e18bfe80b9636b9e6f50d&units=metric`)
     let weather = await data.json()
-    console.log(' погода', weather);
+    // console.log(' погода', weather);
 
     return weather;
 }
 
 // try {
-    getApiWeather(cityName)
-        .then(weather => {
-            console.log(weather);
+getApiWeather(cityName)
+    .then(weather => {
+        // console.log(weather);
 
-            currentCity.innerHTML = cityName;
-            renderWether(weather)
+        currentCity.innerHTML = cityName;
+        renderWether(weather)
 
-            return weather
-        })
+        return weather
+    })
 // } catch (e) {
 //     console.log(e);
 
@@ -90,16 +90,18 @@ const showWeather = (event) => {
     event.preventDefault()
 
     getApiWeather(cityInput.value)
-        .then(weather => {
+    
+    .then(weather => {
+        console.log('weather', weather);
             if (weather.cod !== 200) {
-                document.querySelector("#error").innerHTML = "'" + cityInput.value + "'" + " city not found";
+                document.querySelector("#weatherError").innerHTML = "'" + cityInput.value + "'" + " city not found";
             } else {
                 showCity(weather);
                 renderWether(weather);
                 // event.target.closest(".weatherForm").style.transform = "translateY(-100%)"
                 // anotherCityBtn.style.transform = "translateY(0)";
                 cityInput.value = "";
-                document.querySelector("#error").innerHTML = ""
+                document.querySelector("#weatherError").innerHTML = ""
                 getSunset(weather)
             }
             return weather

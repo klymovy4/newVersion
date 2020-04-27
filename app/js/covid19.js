@@ -1,4 +1,6 @@
 const covidMainBlock = document.querySelector('#covidMainBlock')
+const covidInput = document.querySelector('#covidInput')
+const covidError = document.querySelector('#covidError')
 const url = 'https://api.covid19api.com/summary'
 
 // covidMainBlock.innerHTML = 'Пиздец'
@@ -14,20 +16,19 @@ async function getCor19() {
 }
 
 function showCovid19ByCountry(countryName = 'ukraine') {
-
+    loadingCovid()
     getCor19()
         .then((country) => {
-            loadingCovid()
             toHTML(country, countryName)
+            return country
         })
         .catch((e) => {
-            covidMainBlock.innerHTML = 'Бро, что-то пошло не так'
-            console.error('Something wrong');
+            // covidMainBlock.innerHTML = 'Бро, что-то пошло не так!'
+            console.error('Something wrong', e);
         })
 }
 
 getCor19()
-    .then((country) => console.log('test', country))
 
 // const getCor19 = async (countryName = 'ukraine') => {
 //     loadingCovid()
@@ -57,24 +58,39 @@ const renderCovidResults = ({ NewConfirmed, NewDeaths, NewRecovered, TotalConfir
         </div>
         `
 }
-
+let arrSlug = [] 
 const toHTML = (globalObj, countryName) => {
+    arrSlug = []
     const currentCountry = document.querySelector('#covidCountry')
     for (let i = 0; i < globalObj.Countries.length; i++) {
+        arrSlug.push(globalObj.Countries[i].Slug)
         if (globalObj.Countries[i].Slug === countryName) {
             covidMainBlock.innerHTML = renderCovidResults(globalObj.Countries[i])
             currentCountry.innerHTML = globalObj.Countries[i].Country
+            covidError.innerHTML = ''
             break;
         }
     }
+    if (arrSlug.indexOf(countryName) === -1) {
+        showError(countryName)
+    }
+    console.log(arrSlug, globalObj.Countries);
 }
 
 const showCovid = (event) => {
     event.preventDefault()
-    const covidInput = document.querySelector('#covidInput').value
+    const input = covidInput.value
     // getCor19(covidInput)
-    showCovid19ByCountry(covidInput)
+    if (input === '') {
+        return;
+    }
+    showCovid19ByCountry(input)
 }
+
+const showError = (a) => {
+    covidError.innerHTML = "Бро, пошло что-то не так такой страны как " + "'" + a + "'" + " не существует"
+}
+
 
 
 document.querySelector('#showCovidResults').addEventListener('click', showCovid)
