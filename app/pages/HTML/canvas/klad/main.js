@@ -26,7 +26,7 @@ function init() {
         x: getRandomPlace(width),
         y: getRandomPlace(height)
     };
-    console.log(target);
+    // console.log(target);
 }
 init();  
 
@@ -70,5 +70,5 @@ var getDistanseHint = function (distance) {
 
 };
 
-console.log(target);
+// console.log(target);
 // var distanceHint = getDistanseHint(distance);

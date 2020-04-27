@@ -15,8 +15,8 @@ var double  = function(number){
    return number * 2;
    
 }
-console.log(double(3) + double(12));
-console.log(double(double(4)));
+// console.log(double(3) + double(12));
+// console.log(double(double(4)));
 
 
 var pickUpRandomWordds = function(wordd){

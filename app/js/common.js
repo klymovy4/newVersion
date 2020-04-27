@@ -37,7 +37,7 @@ $(function () {
 
 	var mobileScrolDown = true;
 	$('.dropdown').click(function (event) {
-		console.log(event);
+		// console.log(event);
 		mobileScrolDown = false;
 		//event.stopPropagation();
 	});
@@ -179,7 +179,7 @@ $(function () {
 
 	});
 	$('.modall').click(function () {
-		$('.modal-content').hide();
+		// $('.modal-content').hide();
 		$('.modall').hide();
 	});
 

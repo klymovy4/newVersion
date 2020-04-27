@@ -20,13 +20,13 @@ function reload() {
 
 function init() {
     randomWord = words[Math.floor(Math.random() * words.length)];
-    console.log('randomWord', randomWord);
+    // console.log('randomWord', randomWord);
 
     answerArray = [];
     for (var i = 0; i < randomWord.length; i++) {
         answerArray[i] = '_ ';
     }
-    console.log(answerArray);
+    // console.log(answerArray);
 
     word.innerHTML = answerArray.join('');
 
@@ -63,7 +63,7 @@ function btnClick() {
                     word.innerHTML = answerArray.join('');
                     remainingLetters--;
                     form.reset();
-                    console.log(randomWord[j]);
+                    // console.log(randomWord[j]);
                     // return;
 
                 }

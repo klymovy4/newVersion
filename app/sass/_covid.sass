@@ -1,0 +1,36 @@
+.covid19
+    position: relative
+    height: inherit
+    &::after
+        content: ''
+        position: absolute
+        background-image: url(../img/covid19_lg.jpg)
+        background-repeat: no-repeat
+        background-position: center
+        background-size: cover
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        opacity: 0.4
+    .covid_title
+        border-bottom: 2px solid black
+        display: flex
+        flex-wrap: wrap
+        
+        justify-content: space-between
+        align-items: flex-end
+        h3
+            line-height: 1.25
+            margin-bottom: 0
+    .covidrForm
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        height: inherit
+        z-index: 1
+        .error
+            position: absolute
+            color: red
+            top: 35px

@@ -54,7 +54,7 @@ const addTodo = () => {
 
 function clicker(el) {
 
-    console.log(el.children);
+    // console.log(el.children);
     el.children[0].disabled = false;
     let index = +el.children[0].id;
     const onKeyUp = (event) => {
@@ -90,7 +90,7 @@ function toggleTodo(el, id) {
         }
         return elem;
     })
-    console.log(LIST);
+    // console.log(LIST);
     localStorage.setItem('list', JSON.stringify(LIST));
 }
 
@@ -140,7 +140,7 @@ function showByChecked(bool) {
 };
 
 function showAll() {
-    console.log(LIST);
+    // console.log(LIST);
     content_ul.innerHTML = '';
 
     LIST.forEach(renderTodo);

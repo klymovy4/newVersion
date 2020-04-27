@@ -114,7 +114,7 @@ $('.ffff').click(function () {
     clicks++;
 
     if (clicks > 4) {
-        console.log(clicks);
+        // console.log(clicks);
         $('.ffff').text('Good');
         $('.ffff').removeClass('rotateFfff');
     } else {

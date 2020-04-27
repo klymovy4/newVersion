@@ -21,21 +21,29 @@ const showCity = (city) => {
 async function getApiWeather(cityName) {
     let data = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=4bfc9c92a94e18bfe80b9636b9e6f50d&units=metric`)
     let weather = await data.json()
-    // console.log(weather.dt);
+    console.log(' погода', weather);
 
     return weather;
 }
-getApiWeather(cityName)
-    .then(weather => {
-        currentCity.innerHTML = cityName;
-        renderWether(weather)
 
-        return weather
-    })
+// try {
+    getApiWeather(cityName)
+        .then(weather => {
+            console.log(weather);
+
+            currentCity.innerHTML = cityName;
+            renderWether(weather)
+
+            return weather
+        })
+// } catch (e) {
+//     console.log(e);
+
+// }
+
 // .then(weather => showTime1(weather))
 
 const renderWether = (weather) => {
-    console.log(weather.dt * 1000);
     const div = `
     <div class="row mt-4 mb-3">
         <div class="col-12 col-md-3 mb-1">
