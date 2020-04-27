@@ -25,13 +25,22 @@ async function getApiWeather(cityName) {
 
     return weather;
 }
-getApiWeather(cityName)
-    .then(weather => {
-        currentCity.innerHTML = cityName;
-        renderWether(weather)
 
-        return weather
-    })
+// try {
+    getApiWeather(cityName)
+        .then(weather => {
+            console.log(weather);
+
+            currentCity.innerHTML = cityName;
+            renderWether(weather)
+
+            return weather
+        })
+// } catch (e) {
+//     console.log(e);
+
+// }
+
 // .then(weather => showTime1(weather))
 
 const renderWether = (weather) => {

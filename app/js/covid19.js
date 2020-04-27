@@ -7,18 +7,39 @@ const loadingCovid = () => {
     return covidMainBlock.innerHTML = 'Loading// /'
 }
 
-const getCor19 = async () => {
-    loadingCovid()
-    try {
-        const response = await fetch(url)
-        const country = await response.json()
-        toHTML(country)
-        // showCovid(country)
-        console.log(country)
-    } catch (e) {
-        console.error('error')
-    }
+async function getCor19() {
+    const response = await fetch(url)
+    const country = await response.json()
+    return country
 }
+
+function showCovid19ByCountry(countryName = 'ukraine') {
+
+    getCor19()
+        .then((country) => {
+            loadingCovid()
+            toHTML(country, countryName)
+        })
+        .catch((e) => {
+            covidMainBlock.innerHTML = 'Бро, что-то пошло не так'
+            console.error('Something wrong');
+        })
+}
+
+getCor19()
+    .then((country) => console.log('test', country))
+
+// const getCor19 = async (countryName = 'ukraine') => {
+//     loadingCovid()
+//     try {
+//         const response = await fetch(url)
+//         const country = await response.json()
+//         toHTML(country, countryName)
+//         // console.log(country)
+//     } catch (e) {
+//         console.error('error')
+//     }
+// }
 
 const renderCovidResults = ({ NewConfirmed, NewDeaths, NewRecovered, TotalConfirmed, TotalDeaths, TotalRecovered }) => {
     return `
@@ -37,10 +58,10 @@ const renderCovidResults = ({ NewConfirmed, NewDeaths, NewRecovered, TotalConfir
         `
 }
 
-const toHTML = (globalObj) => {
+const toHTML = (globalObj, countryName) => {
     const currentCountry = document.querySelector('#covidCountry')
     for (let i = 0; i < globalObj.Countries.length; i++) {
-        if (globalObj.Countries[i].Slug === 'ukraine') {
+        if (globalObj.Countries[i].Slug === countryName) {
             covidMainBlock.innerHTML = renderCovidResults(globalObj.Countries[i])
             currentCountry.innerHTML = globalObj.Countries[i].Country
             break;
@@ -51,12 +72,12 @@ const toHTML = (globalObj) => {
 const showCovid = (event) => {
     event.preventDefault()
     const covidInput = document.querySelector('#covidInput').value
-    toHTML(globalObj)
-    // return covidInput
-
+    // getCor19(covidInput)
+    showCovid19ByCountry(covidInput)
 }
 
 
 document.querySelector('#showCovidResults').addEventListener('click', showCovid)
-getCor19()
+showCovid19ByCountry()
+// getCor19()
 
